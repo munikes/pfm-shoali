@@ -14,7 +14,7 @@
 \maketitle
 
 \begin{abstract}
-Desarrollo de una nueva aplicación capaz de permitir gestionar, de manera descentralizada, el dinero de los usuarios que se distribuyen en una red. El objetivo es que cada persona sea dueño de su propio dinero, y pueda utilizarlo de forma transparente como se quiera. La aplicación debe de ser capaz de permitir a cada usuario, realizar préstamos y conceder créditos de manera sencilla.   
+Desarrollo de una nueva aplicación capaz de permitir gestionar, de manera descentralizada, el préstamo de dinero entre particulares que se distribuyen en una red. El objetivo es que cada persona sea dueño de su propio dinero, y pueda dejarlo de forma transparente como se quiera. La aplicación debe de ser capaz de permitir a cada usuario, realizar préstamos de manera sencilla, a cualquier persona o grupo de personas.   
 \end{abstract}
 
 \section{Objetivos}
@@ -22,49 +22,48 @@ Desarrollo de una nueva aplicación capaz de permitir gestionar, de manera desce
 El objetivo principal de este proyecto es:
 
 \begin{center}
-\bf{Crear una aplicación que permita a los usuarios gestionar su propio dinero, sin necesidad de intermediarios}
+\bf{Crear una aplicación que permita a los usuarios hacer préstamos, sin necesidad de intermediarios.}
 \end{center}
 
 Este objetivo se puede dividir en los siguientes subobjetivos:
 
 \begin{enumerate}
-  \item Aplicación capaz de gestionar comunidades de gente, dispuesta a beneficiarse de la cooperación o que simplemente quiere colabora de manera altruista.\\ 
-En esta comunidad existen tres perfiles:
+  \item Aplicación capaz de gestionar los préstamos de comunidades de gente, tanto si son de uno a uno,  de uno a varios, de varios a uno, o simplemente dejar el dinero a otros de manera altruista.\\ 
+Para ello deben de existir dos tipos de perfiles:
 \begin{enumerate}
-\item \textbf{Deudor}: Persona que tiene una hipoteca, su cuota será la misma que tiene en la entidad financiera o mayor, si lo desea. Su compromiso de permanencia será el mismo que tiene con la entidad financiera.
-\item \textbf{Cooperador}: Persona que desea cooperar, para beneficiarse de los intereses no sustraídos por las entidades financieras. Su cuota y compromiso puede ser variable, y en función de esta aportación tendrán más o menos beneficios.
-\item \textbf{Colaborador}: Persona que desea colaborar de manera altruista. No tiene cuotas, ni ningún tipo de obligación para con la comunidad.
+    \item \textbf{Prestamista (\textit{``ant o lender''})}: Persona que suministra dinero a los demás. Este tipo de usuario, puede fiar a quien quiera y al tipo de interés que el desee.
+    \item \textbf{Prestatario (\textit{``cicada o borrower''})}: Persona que desea una cantidad de dinero. El rol de este usuario, le permite decidir cuanto dinero quiere percibir y a que tipo de interés.
 \end{enumerate}
-  \item Un motor que calcula la mejor manera de amortizar las hipotecas.
-  \item Un motor que calcula los beneficios, en función de la aportación de cada miembro.
-  \item Gestión financiera del capital de cada comunidad (Bitcoin, Flattr y dinero en entidades financieras éticas).
+  \item Un motor de búsqueda que ayude a encontrar el préstamo que mejor se adapte a los intereses de cada usuario.
+  \item Gestión financiera del capital gracias a la moneda virtual Bitcoin.
 \end{enumerate}
 
 
 \section{Motivación}
 
-Cuando compramos una casa, debemos de hacer frente a una hipoteca y a los intereses que genera esta. Si esta operación, en vez de hacerla de manera individual, la afrontáramos con nuestra gente más allegada o incluso, gracias a las redes sociales, con un grupo de personas que quisiera ayudarnos, los intereses generados por nuestra hipoteca se reducirían considerablemente, o incluso podrían llegar a ser cero. Pienso, que algunas veces, debemos de olvidarnos del individualismo y la competencia, para intentar cooperar e incluso colaborar con nuestros semejantes. Estamos pagando las consecuencias de las practicas abusivas de las entidades financieras y de un sistema que aboga por tener cada vez más y más. Actualmente no tenemos un modelo alternativo, aunque varias son las tentativas: cooperativas, microcréditos, etc. Esta aplicación pretende ser una herramienta para optimizar una manera diferente de financiación.
+Actualmente si deseamos realizar un préstamo o se quiere obtener financiación, de manera virtual, es imposible hacerlo sin pasar antes a través de alguna entidad financiera. Por este motivo, creo en la necesidad de poder realizar este tipo de operaciones virtuales. Ahora, no existe una plataforma digital que supla a cooperativas, que de microcréditos, y que permita financiación entre particulares. Esta aplicación pretende ser una herramienta para optimizar una manera diferente de financiación, abogando por las inversiones entre pares, atajando a las grandes entidades financieras.
 
 \section{Tecnologías involucradas}
 
 Las tecnologías involucradas en este proyecto son:
 
 \begin{itemize}
-  \item Lenguaje de programación Python, nivel básico.
-  \item La gestión de las comunidades me gustaría que fuera a través de Diaspora. Ningún conocimiento.
+  \item Lenguaje de programación Python (django), nivel básico.
+  \item La gestión de las comunidades me gustaría que fuera federativa. Ningún conocimiento.
   \item Base de datos, por orden de preferencia, PostgreSQL, MariaDB, MySQL y otras.
-  \item La gestión del capital, a través de Bitcoin y Flattr, nivel de conocimiento básico.
+  \item La gestión del capital, a través de Bitcoin, nivel de conocimiento básico.
 \end{itemize}
 
 \section{Planificación tentativa}
 
-No tengo ni idea, el comienzo de la tesis sería cuanto antes. Pero teniendo en cuenta la carga docente se me va a hacer muy difícil comenzar antes de la finalización de las asignaturas del Máster.
+No tengo ni idea, el comienzo de la tesis sería cuanto antes.
 
 \begin{enumerate}
-  \item Paso: Creación de la forja.
-  \item Paso: Creación de los motores de cálculo (amortización y de beneficios).
-  \item Paso: Implementación del módulo de Diaspora.
-  \item Paso: Creación de aplicación de gestión financiera. 
+  \item Paso: Creación del portal web.
+  \item Paso: Creación de la aplicación web.
+  \item Paso: Creación de la forja para mantener a la comunidad.
+  \item Paso: Creación de los motores de búsqueda.
+  \item Paso: Creación de aplicación de gestión financiera, Bitcoin. 
   \item Paso: Creación de la aplicación cliente.
   \item Paso: Testeo de la aplicación.
   \item Entrega memoria: no tengo conocimiento.
@@ -72,7 +71,7 @@ No tengo ni idea, el comienzo de la tesis sería cuanto antes. Pero teniendo en 
 
 \section{Otros}
 
-%Considero la necesidad de una reunión para la gestación y maduración del proyecto.  
+Considero la necesidad de una reunión para la gestación y maduración del proyecto.  
 %Espacio para indicar otras cuestiones que consideres de interés, como por ejemplo, si te gustaría tener otro tutor, necesitas material especial, etc.
 
 \end{document}
