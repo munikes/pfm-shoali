@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="" company="" manager="" phase="" project-start="20121105T000000Z" mrproject-version="2" calendar="1">
+<project name="Shoali" company="" manager="mUniKeS" phase="" project-start="20121105T000000Z" mrproject-version="2" calendar="2">
   <properties/>
   <phases/>
   <calendars>
@@ -16,7 +16,18 @@
           <interval start="1300" end="1700"/>
         </overridden-day-type>
       </overridden-day-types>
-      <days/>
+      <days>
+        <day date="20130101" type="day-type" id="1"/>
+        <day date="20121109" type="day-type" id="1"/>
+        <day date="20121231" type="day-type" id="1"/>
+        <day date="20121210" type="day-type" id="1"/>
+        <day date="20130107" type="day-type" id="1"/>
+        <day date="20121206" type="day-type" id="1"/>
+        <day date="20121225" type="day-type" id="1"/>
+        <day date="20121224" type="day-type" id="1"/>
+        <day date="20121102" type="day-type" id="1"/>
+        <day date="20121101" type="day-type" id="1"/>
+      </days>
       <calendar id="2" name="Ma&#xF1;ana">
         <default-week mon="2" tue="2" wed="2" thu="2" fri="2" sat="2" sun="2"/>
         <overridden-day-types>
@@ -29,133 +40,175 @@
     </calendar>
   </calendars>
   <tasks>
-    <task id="1" name="Introducci&#xF3;n" note="Introduci&#xF3;n, entregar a Gregorio" work="259200" start="20121105T000000Z" end="20121116T120000Z" work-start="20121105T090000Z" percent-complete="60" priority="0" type="normal" scheduling="fixed-work">
+    <task id="1" name="Introducci&#xF3;n" note="Introduci&#xF3;n, entregar a Gregorio" work="162000" start="20121105T000000Z" end="20121115T140000Z" work-start="20121105T090000Z" percent-complete="60" priority="0" type="normal" scheduling="fixed-work">
       <constraint type="must-start-on" time="20121105T000000Z"/>
-      <task id="2" name="Crear la planificaci&#xF3;n" note="Buscar aplicaci&#xF3;n Gantt.&#10;Me ayudo Moni." work="28800" start="20121105T000000Z" end="20121106T120000Z" work-start="20121105T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="Crear la planificaci&#xF3;n" note="Buscar aplicaci&#xF3;n Gantt.&#10;Me ayudo Moni." work="18000" start="20121105T000000Z" end="20121105T140000Z" work-start="20121105T090000Z" percent-complete="64" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20121105T000000Z"/>
       </task>
-      <task id="3" name="1, 2 &#xBF;Qu&#xE9;? &#xBF;Qui&#xE9;n?" note="&#xBF;Qu&#xE9; es el proyecto?&#10;&#xBF;Qui&#xE9;n lo usa y lo desarrolla?" work="28800" start="20121106T000000Z" end="20121107T120000Z" work-start="20121106T090000Z" percent-complete="50" priority="0" type="normal" scheduling="fixed-work">
+      <task id="3" name="1, 2 &#xBF;Qu&#xE9;? &#xBF;Qui&#xE9;n?" note="&#xBF;Qu&#xE9; es el proyecto?&#10;&#xBF;Qui&#xE9;n lo usa y lo desarrolla?" work="18000" start="20121106T000000Z" end="20121106T140000Z" work-start="20121106T090000Z" percent-complete="50" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20121106T000000Z"/>
         <predecessors>
           <predecessor id="1" predecessor-id="2" type="FS"/>
         </predecessors>
       </task>
-      <task id="4" name="3, 4 &#xBF;C&#xF3;mo? &#xBF;Cuando?" note="Tecnolog&#xED;as.&#10;Contexto historico." work="28800" start="20121107T000000Z" end="20121108T120000Z" work-start="20121107T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="4" name="3, 4 &#xBF;C&#xF3;mo? &#xBF;Cuando?" note="Tecnolog&#xED;as.&#10;Contexto historico." work="18000" start="20121107T000000Z" end="20121107T140000Z" work-start="20121107T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20121107T000000Z"/>
         <predecessors>
           <predecessor id="1" predecessor-id="3" type="FS"/>
         </predecessors>
       </task>
-      <task id="5" name="5, 6 &#xBF;D&#xF3;nde? &#xBF;Porque?" note="Donde se va a usar.&#10;Motivaciones." work="28800" start="20121108T000000Z" end="20121109T120000Z" work-start="20121108T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="5" name="5, 6 &#xBF;D&#xF3;nde? &#xBF;Porque?" note="Donde se va a usar.&#10;Motivaciones." work="18000" start="20121108T000000Z" end="20121108T140000Z" work-start="20121108T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20121108T000000Z"/>
         <predecessors>
           <predecessor id="1" predecessor-id="4" type="FS"/>
         </predecessors>
       </task>
-      <task id="6" name="Objetivo" note="El objetivo del proyecto" work="28800" start="20121109T000000Z" end="20121112T120000Z" work-start="20121109T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+      <task id="6" name="Objetivo" note="El objetivo del proyecto" work="18000" start="20121109T000000Z" end="20121112T140000Z" work-start="20121112T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20121109T000000Z"/>
         <predecessors>
           <predecessor id="1" predecessor-id="5" type="FS"/>
         </predecessors>
       </task>
-      <task id="7" name="Subobjetivos" note="" work="86400" start="20121112T000000Z" end="20121115T120000Z" work-start="20121112T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
-        <task id="8" name="subobjetivo 1, 2" note="" work="28800" start="20121112T000000Z" end="20121113T120000Z" work-start="20121112T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+      <task id="7" name="Subobjetivos" note="" work="54000" start="20121112T000000Z" end="20121114T140000Z" work-start="20121112T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+        <task id="8" name="subobjetivo 1, 2" note="" work="18000" start="20121112T000000Z" end="20121112T140000Z" work-start="20121112T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <constraint type="must-start-on" time="20121112T000000Z"/>
           <predecessors>
             <predecessor id="1" predecessor-id="6" type="FS"/>
           </predecessors>
         </task>
-        <task id="9" name="subobjetivo 3, 4" note="" work="28800" start="20121113T000000Z" end="20121114T120000Z" work-start="20121113T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+        <task id="9" name="subobjetivo 3, 4" note="" work="18000" start="20121113T000000Z" end="20121113T140000Z" work-start="20121113T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <constraint type="must-start-on" time="20121113T000000Z"/>
           <predecessors>
             <predecessor id="1" predecessor-id="8" type="FS"/>
           </predecessors>
         </task>
-        <task id="10" name="subobjetivo 5, 6" note="" work="28800" start="20121114T000000Z" end="20121115T120000Z" work-start="20121114T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+        <task id="10" name="subobjetivo 5, 6" note="" work="18000" start="20121114T000000Z" end="20121114T140000Z" work-start="20121114T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <constraint type="must-start-on" time="20121114T000000Z"/>
           <predecessors>
             <predecessor id="1" predecessor-id="9" type="FS"/>
           </predecessors>
         </task>
       </task>
-      <task id="11" name="Reuni&#xF3;n con Gregorio" note="Reuni&#xF3;n con Gregorio para hacer el desarrollo" work="28800" start="20121115T000000Z" end="20121116T120000Z" work-start="20121115T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="11" name="Reuni&#xF3;n con Gregorio" note="Reuni&#xF3;n con Gregorio para hacer el desarrollo" work="18000" start="20121115T000000Z" end="20121115T140000Z" work-start="20121115T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20121115T000000Z"/>
         <predecessors>
           <predecessor id="1" predecessor-id="10" type="FS"/>
         </predecessors>
       </task>
-      <task id="12" name="Fin introducci&#xF3;n" note="" work="0" start="20121116T120000Z" end="20121116T120000Z" work-start="20121116T120000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <task id="12" name="Fin introducci&#xF3;n" note="" work="0" start="20121115T140000Z" end="20121115T140000Z" work-start="20121115T140000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="11" type="FS"/>
         </predecessors>
       </task>
     </task>
-    <task id="13" name="Dise&#xF1;o e implementaci&#xF3;n" note="" work="4204800" start="20121116T120000Z" end="20130507T100000Z" work-start="20121116T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="13" name="Dise&#xF1;o e implementaci&#xF3;n" note="" work="1468800" start="20121115T140000Z" end="20130312T140000Z" work-start="20121116T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="1" type="FS"/>
       </predecessors>
-      <task id="14" name="Entorno de desarrollo" note="Forja, lenguaje, bugtracker, etc.&#10;" work="86400" start="20121116T120000Z" end="20121123T110000Z" work-start="20121116T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="15" name="Creaci&#xF3;n diagramas" note="" work="86400" start="20121123T110000Z" end="20121130T100000Z" work-start="20121123T110000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="14" name="Entorno de desarrollo" note="Forja, lenguaje, bugtracker, etc.&#10;" work="54000" start="20121115T140000Z" end="20121120T140000Z" work-start="20121116T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="15" name="Creaci&#xF3;n diagramas" note="" work="54000" start="20121120T140000Z" end="20121123T140000Z" work-start="20121121T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="14" type="FS"/>
         </predecessors>
-        <task id="16" name="Flujo" note="" work="28800" start="20121123T110000Z" end="20121126T140000Z" work-start="20121123T110000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="17" name="Clases" note="" work="28800" start="20121126T140000Z" end="20121128T120000Z" work-start="20121127T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="16" name="Flujo" note="" work="18000" start="20121120T140000Z" end="20121121T140000Z" work-start="20121121T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="17" name="Clases" note="" work="18000" start="20121121T140000Z" end="20121122T140000Z" work-start="20121122T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="16" type="FS"/>
           </predecessors>
         </task>
-        <task id="18" name="Secuencia y despliegue" note="" work="28800" start="20121128T120000Z" end="20121130T100000Z" work-start="20121128T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="18" name="Secuencia y despliegue" note="" work="18000" start="20121122T140000Z" end="20121123T140000Z" work-start="20121123T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="17" type="FS"/>
           </predecessors>
         </task>
       </task>
-      <task id="19" name="Desarrollo" note="" work="4032000" start="20121130T100000Z" end="20130507T100000Z" work-start="20121130T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="19" name="Desarrollo" note="" work="1360800" start="20121123T140000Z" end="20130312T140000Z" work-start="20121126T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="18" type="FS"/>
         </predecessors>
-        <task id="20" name="Gesti&#xF3;n de usuarios" note="" work="288000" start="20121130T100000Z" end="20121224T100000Z" work-start="20121130T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="21" name="Gesti&#xF3;n de transacciones" note="Busqueda de transsacciones.&#10;Conceder y recibir.&#10;Dos tipos:&#10;En cadena de confianza y directa." work="864000" start="20121224T100000Z" end="20130228T100000Z" work-start="20121224T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="20" name="Gesti&#xF3;n de usuarios" note="" work="180000" start="20121123T140000Z" end="20121211T140000Z" work-start="20121126T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="21" name="Gesti&#xF3;n de transacciones" note="Busqueda de transsacciones.&#10;Conceder y recibir.&#10;Dos tipos:&#10;En cadena de confianza y directa." work="540000" start="20121211T140000Z" end="20130129T140000Z" work-start="20121212T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="20" type="FS"/>
           </predecessors>
         </task>
-        <task id="22" name="Dise&#xF1;o de la aplicaci&#xF3;n" note="" work="288000" start="20130228T100000Z" end="20130322T100000Z" work-start="20130228T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="22" name="Dise&#xF1;o de la aplicaci&#xF3;n" note="" work="180000" start="20130129T140000Z" end="20130212T140000Z" work-start="20130130T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="21" type="FS"/>
           </predecessors>
         </task>
-        <task id="23" name="Documentaci&#xF3;n" note="Blog.&#10;Ir poniendo documentaci&#xF3;n de desarrollo y de usuario.&#10;Ir haciendo acopio de posibles bugs." work="2016000" start="20121130T100000Z" end="20130507T100000Z" work-start="20121130T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="24" name="Seguridad" note="Encriptaci&#xF3;n.&#10;Firma digital." work="576000" start="20130322T100000Z" end="20130507T100000Z" work-start="20130322T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="23" name="Seguridad" note="Encriptaci&#xF3;n.&#10;Firma digital." work="360000" start="20130212T140000Z" end="20130312T140000Z" work-start="20130213T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="22" type="FS"/>
           </predecessors>
         </task>
-        <task id="25" name="Fin de desarrollo" note="" work="0" start="20130507T100000Z" end="20130507T100000Z" work-start="20130507T100000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <task id="24" name="Documentaci&#xF3;n" note="Blog.&#10;Ir poniendo documentaci&#xF3;n de desarrollo y de usuario.&#10;Ir haciendo acopio de posibles bugs." work="100800" start="20130305T110000Z" end="20130312T140000Z" work-start="20130305T110000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
-            <predecessor id="1" predecessor-id="24" type="FS"/>
+            <predecessor id="1" predecessor-id="25" type="FF"/>
+          </predecessors>
+        </task>
+        <task id="25" name="Fin de desarrollo" note="" work="0" start="20130312T140000Z" end="20130312T140000Z" work-start="20130312T140000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="23" type="FS"/>
           </predecessors>
         </task>
       </task>
     </task>
-    <task id="26" name="Resultados y pruebas" note="" work="1180800" start="20121105T000000Z" end="20121126T140000Z" work-start="20121105T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="27" name="Dar de alta usuario" note="" work="288000" start="20121105T000000Z" end="20121126T140000Z" work-start="20121105T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="28" name="Buscar cr&#xE9;ditos" note="" work="288000" start="20121105T000000Z" end="20121126T140000Z" work-start="20121105T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="29" name="Transacci&#xF3;n de creditos" note="" work="288000" start="20121105T000000Z" end="20121126T140000Z" work-start="20121105T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="30" name="Navegavilidad" note="" work="288000" start="20121105T000000Z" end="20121126T140000Z" work-start="20121105T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="31" name="Margen de error" note="" work="28800" start="20121105T000000Z" end="20121106T120000Z" work-start="20121105T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="26" name="Resultados y pruebas" note="" work="720000" start="20130312T140000Z" end="20130507T140000Z" work-start="20130313T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="13" type="FS"/>
+      </predecessors>
+      <task id="27" name="Dar de alta usuario" note="" work="180000" start="20130312T140000Z" end="20130326T140000Z" work-start="20130313T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="23" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="28" name="Buscar cr&#xE9;ditos" note="" work="180000" start="20130326T140000Z" end="20130409T140000Z" work-start="20130327T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="27" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="29" name="Transacci&#xF3;n de creditos" note="" work="180000" start="20130409T140000Z" end="20130423T140000Z" work-start="20130410T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="28" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="30" name="Navegavilidad" note="" work="180000" start="20130423T140000Z" end="20130507T140000Z" work-start="20130424T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="29" type="FS"/>
+        </predecessors>
+      </task>
     </task>
-    <task id="32" name="Conclusiones y trabajos futuros" note="" work="172800" start="20121105T000000Z" end="20121114T140000Z" work-start="20121105T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="33" name="Conclusiones" note="" work="144000" start="20121105T000000Z" end="20121114T140000Z" work-start="20121105T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="34" name="Trabajos futuros" note="" work="28800" start="20121105T000000Z" end="20121106T120000Z" work-start="20121105T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="31" name="Conclusiones y trabajos futuros" note="" work="180000" start="20130507T140000Z" end="20130521T140000Z" work-start="20130508T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="26" type="FS"/>
+      </predecessors>
+      <task id="32" name="Conclusiones" note="" work="90000" start="20130507T140000Z" end="20130514T140000Z" work-start="20130508T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="33" name="Trabajos futuros" note="" work="90000" start="20130514T140000Z" end="20130521T140000Z" work-start="20130515T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="32" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="34" name="Encuadernaci&#xF3;n y preparaci&#xF3;n" note="" work="90000" start="20130521T140000Z" end="20130528T140000Z" work-start="20130522T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="31" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="35" name="Fin de trabajo" note="" work="0" start="20130528T140000Z" end="20130528T140000Z" work-start="20130528T140000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="34" type="FS"/>
+      </predecessors>
     </task>
   </tasks>
   <resource-groups/>
   <resources>
-    <resource id="1" name="Diego" short-name="mUniK" type="1" units="0" email="" note="" std-rate="0" calendar="2"/>
+    <resource id="1" name="Diego" short-name="mUniKeS" type="1" units="0" email="" note="" std-rate="0" calendar="2"/>
   </resources>
   <allocations>
+    <allocation task-id="35" resource-id="1" units="100"/>
+    <allocation task-id="34" resource-id="1" units="100"/>
+    <allocation task-id="24" resource-id="1" units="100"/>
     <allocation task-id="12" resource-id="1" units="100"/>
     <allocation task-id="26" resource-id="1" units="100"/>
     <allocation task-id="27" resource-id="1" units="100"/>
@@ -165,10 +218,8 @@
     <allocation task-id="31" resource-id="1" units="100"/>
     <allocation task-id="32" resource-id="1" units="100"/>
     <allocation task-id="33" resource-id="1" units="100"/>
-    <allocation task-id="34" resource-id="1" units="100"/>
     <allocation task-id="25" resource-id="1" units="100"/>
     <allocation task-id="23" resource-id="1" units="100"/>
-    <allocation task-id="24" resource-id="1" units="100"/>
     <allocation task-id="22" resource-id="1" units="100"/>
     <allocation task-id="21" resource-id="1" units="100"/>
     <allocation task-id="20" resource-id="1" units="100"/>
