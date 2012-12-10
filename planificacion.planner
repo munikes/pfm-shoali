@@ -42,10 +42,10 @@
   <tasks>
     <task id="1" name="Introducci&#xF3;n" note="Introduci&#xF3;n, entregar a Gregorio" work="162000" start="20121105T000000Z" end="20121115T140000Z" work-start="20121105T090000Z" percent-complete="60" priority="0" type="normal" scheduling="fixed-work">
       <constraint type="must-start-on" time="20121105T000000Z"/>
-      <task id="2" name="Crear la planificaci&#xF3;n" note="Buscar aplicaci&#xF3;n Gantt.&#10;Me ayudo Moni." work="18000" start="20121105T000000Z" end="20121105T140000Z" work-start="20121105T090000Z" percent-complete="64" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="Crear la planificaci&#xF3;n" note="Buscar aplicaci&#xF3;n Gantt.&#10;Me ayudo Moni." work="18000" start="20121105T000000Z" end="20121105T140000Z" work-start="20121105T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20121105T000000Z"/>
       </task>
-      <task id="3" name="1, 2 &#xBF;Qu&#xE9;? &#xBF;Qui&#xE9;n?" note="&#xBF;Qu&#xE9; es el proyecto?&#10;&#xBF;Qui&#xE9;n lo usa y lo desarrolla?" work="18000" start="20121106T000000Z" end="20121106T140000Z" work-start="20121106T090000Z" percent-complete="50" priority="0" type="normal" scheduling="fixed-work">
+      <task id="3" name="1, 2 &#xBF;Qu&#xE9;? &#xBF;Qui&#xE9;n?" note="&#xBF;Qu&#xE9; es el proyecto?&#10;&#xBF;Qui&#xE9;n lo usa y lo desarrolla?" work="18000" start="20121106T000000Z" end="20121106T140000Z" work-start="20121106T090000Z" percent-complete="75" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20121106T000000Z"/>
         <predecessors>
           <predecessor id="1" predecessor-id="2" type="FS"/>
@@ -57,7 +57,7 @@
           <predecessor id="1" predecessor-id="3" type="FS"/>
         </predecessors>
       </task>
-      <task id="5" name="5, 6 &#xBF;D&#xF3;nde? &#xBF;Porque?" note="Donde se va a usar.&#10;Motivaciones." work="18000" start="20121108T000000Z" end="20121108T140000Z" work-start="20121108T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="5" name="5, 6 &#xBF;D&#xF3;nde? &#xBF;Porque?" note="Donde se va a usar.&#10;Motivaciones." work="18000" start="20121108T000000Z" end="20121108T140000Z" work-start="20121108T090000Z" percent-complete="25" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20121108T000000Z"/>
         <predecessors>
           <predecessor id="1" predecessor-id="4" type="FS"/>
