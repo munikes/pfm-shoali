@@ -1,57 +1,387 @@
-Para Mayo
+\documentclass[a4paper, 12pt]{book}
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
+%\usepackage[a4paper]{geometry}
+\usepackage{times}
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[textwidth=2cm]{todonotes}
+\usepackage[hyphens]{url}
+\usepackage[spanish]{babel}
+%\usepackage[dvipdfm]{graphicx}
+\usepackage{float}
+\usepackage[nottoc, notlot, notlof, notindex]{tocbibind}
+\usepackage{latexsym}  %% Logo LaTeX
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[colorlinks,bookmarksopen]{hyperref}
+%\usepackage[svgnames]{xcolor}
 
-*Introducción
-1. ¿Qué? (what)
-Es un servicio web diseñado para ayudar a la gente a hacer transacciones de dinero entre pares sin necesidad de intermediarios. Está aplicación lo que te concede es ser dueño de tu propio dinero, sin poner los intereses al servicio de intermediarios. Es un sistema que permite controlar como prestar o recibir capital con absoluta transparencia. La plataforma creará redes sociales de intercambio de fondos. Existen dos formas de realizar un préstamo, directa o con cadenas de confianza. La \textbf{transacción directa}, es el autentico préstamo \textit{"peer-to-peer"}, en el que uno o varios prestatarios piden capital de manera directa a otro u otros prestamistas; sin importar la relación que exista entre ellos, pero si la reputación. El otro tipo es, a través de una \textbf{cadena de confianza}. El préstamo sólo se puede ejecutar cuando entre el prestamista y el prestatario existe algún camino dentro de su red social \cite{ripple}, sin tener en cuenta la reputación.
+%% PDF metadata
+\hypersetup{
+  pdftitle={Shoali},
+  pdfauthor={Diego Pardilla Mata},
+  pdfcreator={Master on Libre Software (URJC), Universidad Rey Juan Carlos},
+  pdfproducer=PDFLaTeX,
+  pdfsubject={Libre Software},
+  %%% change colors to darker ones (for printing in B/W)
+  linkcolor=Sepia,
+  citecolor=OliveGreen,
+  filecolor=violet,
+  urlcolor=blue
+}
+%%
 
-El servicio está descentralizado, lo que lo hace aún más transparente, ya que impide la concentración de información en determinados puntos y su posible manipulación. Todas los servidores pueden hablar entre ellos, permitiendo a todos los usuarios interactuar entre ellos, sin importar su origen. La redes sociales emergentes serán descentralizadas y cumpliran con las especificiaciones del \textit{"W3C federated web social incubator group"} \url{http://www.w3.org/2005/Incubator/federatedsocialweb/}, consiguiendo así, que cada usuario sea libre de compartir su información, los datos que genera, y su identidad online.
+% Alter some LaTeX defaults for better treatment of figures:
+    % See p.105 of "TeX Unbound" for suggested values.
+    % See pp. 199-200 of Lamport's "LaTeX" book for details.
+    %   General parameters, for ALL pages:
+    \renewcommand{\topfraction}{0.9}    % max fraction of floats at top
+    \renewcommand{\bottomfraction}{0.8} % max fraction of floats at bottom
+    %   Parameters for TEXT pages (not float pages):
+    \setcounter{topnumber}{2}
+    \setcounter{bottomnumber}{2}
+    \setcounter{totalnumber}{4}     % 2 may work better
+    \setcounter{dbltopnumber}{2}    % for 2-column pages
+    \renewcommand{\dbltopfraction}{0.9} % fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.07}  % allow minimal text w. figs
+    %   Parameters for FLOAT pages (not text pages):
+    \renewcommand{\floatpagefraction}{0.7} % require fuller float pages
+    % N.B.: floatpagefraction MUST be less than topfraction !!
+    \renewcommand{\dblfloatpagefraction}{0.7} % require fuller float pages
 
-Es una aplicación con transfondo basado en el modelo de economía del bien común descrito por Christian Felber \cite{Christian Felber}. Siempre se intentan maximizar, en la medida de lo posible, los valores de la matriz del bien común \url{www.gemeinwohl-oekonomie.org/wp-content/uploads/2012/03/Matriz\_Bien\_Com\%C3\%BAn\_41.pdf}. Estos principios son cinco, la dignidad humana, la solidaridad, la sostenibilidad ecológica, la justicia social, y la participación democrática y transparencia. El interés final del proyecto, es intentar reportar el mayor beneficio al procomún.
+\frenchspacing
 
-En pro de la ciencia y la investigación, la aplicación permite ser configurada para que todo aquel que lo desee pueda hacer una investigación subyacente. Con esta opción activa se dejan accesibles los datos de todo lo que sucede en ella, siempre cumpliendo con la Ley Orgánica de Protección de Datos (LOPD) \cite{LOPD}. Además, por su creación bajo herramientas de software libre, se pueden hacer estudios sobre su desarrollo.
+\title{Shoali}
+\author{Diego Pardilla Mata}
 
-2. ¿Quién? (who) 
-Lo hace. Una comunidad de software libre.
-Lo usa. El que presta y el que pide.
-d
-Es una aplicación libre, con lo que cualquier persona que lo desee puede desarrollar sobre ella. La intención es tener un grupo de colaboradores multidisciplinar, que de manera ``altruista'' creen, mantengan, diseñen, corrigan y ayuden en el proyecto. El deseo no es tener una gran masa de gente detrás del proyecto, sino una comunidad bien organizada. Para conseguir captar a gente, se debe de crear un proyecto atractivo, con una puerta de entrada sencilla. Una persona debe de poder colaborar, sin que le conlleve mucho trabajo y tiempo, y saber en que puede ayudar. Para ello, deben de existir todo tipo de ayudas (wikis, listas de correo, canales irc, y distintas documentaciones) y una forja bien organizada.
+\renewcommand{\baselinestretch}{1.5}
 
-Desarrolladores:
-Diseñadores:
-Traductores:
-ETC...
+\begin{document}
 
-Además la aplicación, una vez publicada debe de conseguir usuarios que la utilizen. Existen dos perfiles, los que prestan dinero y los que lo necesitan. Tanto unos, como otros necesitan de la generación de una red social que les permita interactuar entre ellos. La plataforma debe de ser capaz de germinar una red de usuarios. Los nodos de la red pueden estar conectados de manera directa (transacción directa) o bien a través de otros (cadenas de confianza). En función de la gente que se conecta, se podrían hacer algúnos estudios interesantes, como observar cual es el porcentaje de gente altruista, o ver los pagos medios que fructifican, o descubrir la topología de la red que emerge. Según un estudio de Steven Strogaz(), sobre la topología de las redes, son más efecientes las redes conocidas como ``pequeños mundos''. Redes en las que todos los nodos están conectados a sus vecinos y de vez en cuando un nodo pega un salto a otro extremo de la red. Con le que a lo mejor sería interesante permitir a cada usuario invitar a un par de amigos a la red y de esta manera afianzar nodos vecinos, creando cadenas de confianza más robustas.
+%\renewcommand{\refname}{Bibliografía}
+\renewcommand{\appendixname}{Apéndice}
 
+%%%%%%%%%%%%% COVER %%%%%%%%%%%%%%%%
+\begin{titlepage}
+\begin{center}
+\begin{tabular}[c]{c c}
+%\includegraphics[bb=0 0 194 352, scale=0.25]{logo} &
+\includegraphics[scale=0.25]{img/logo.png} &
+\begin{tabular}[b]{l}
+\Huge
+\textsf{UNIVERSIDAD} \\
+\Huge
+\textsf{REY JUAN CARLOS} \\
+\end{tabular}
+\\
+\end{tabular}
 
-3. ¿Cómo? (how)
-tecnologías, software libre
-Todo el proyecto es libre. El software y la documentación, están bajo licencias libres, para poder ser usados, copiados, modificados y distribuidos, por cualquiera.
+\vspace{3cm}
 
-Si pensamos en el software, como un bien intangible, replicable y no consumible, vemos que la privatización del bien pierde el sentido, al no tener exclusividad de consumo. Con lo que grandes corporaciones intentan recurrir a la extorsión, a la violencia y al chantaje para poder imponer una privatización para la que no existe ya justificación. \cite{Bifo Cap. Fraternidad, saber, no saber}
+\Large
+Máster Universitario en Software Libre
 
-Existe otra hipótesis paralela para la privatización, la necesidad de estimular la innovación a través de la competencia orientada al enriquecimiento. Pero este razonamiento pierde su fuerza, en el momento que observamos proyectos como Linux. Gracias a la colaboración de una comunidad generada espontáneamente a través de la red, por el mero echo de divertirse, es capaz de crear un software mejor que el de una sociedad privada. No se debe intentar promover la innovación y el desarrollo, detrás del telón de la gratificación económica, ya que no es el único factor que puede influir. Por ejemplo, en las comunidades FLOSS, hay gente que colabora de manera altruista, para divertirse, por el reconocimiento, por confraternizar o por todos a la vez. \cite{Bifo Cap. Fraternidad, saber, no saber}
-La decisión de que sea libre es por la creencia de que cualquier bien virtual
+\vspace{0.4cm}
 
-El software de la plataforma  está sujeto a dos licencias. La licencia ``GNU Affero General Public License'' o AGPLv3, que involucra a toda la parte web. Se ha escogido esta licencia, porque al ser una red social federativa, interesa que en caso de que existan proyectos emergentes sigan siendo libres, y aunque simplemente sean servicios web podamos obtener su código fuente. La parte del núcleo o motor de la aplicación, sin embargo, está licenciado con una ``MIT License'' o licencia permisiva. Se decidió inclinarse por está licencia, principalmente, para conseguir un desarrollo más rápido, ágil y eficaz. Es bien sabido que con licencias de tipo permisivo, al no poner ningún tipo de prerrequisito para participar en el, se consigue un desarrollo veloz e incluso a veces, dependiendo del proyecto, pasan a ser un estándar (p.e. TCP/IP con una licencia de tipo BSD). 
+\large
+Curso Académico 2012/2013
 
-La documentación relacionada con el proyecto esta bajo una licencia ``Creative Commons Atribución-CompartirIgual 3.0 Unported'' o CC BY-SA 3.0. La elección se hizo pensando en que la documentación debía de estar disponible a todo el mundo, sin importar quién haga las siguientes versiones.
+\vspace{0.8cm}
 
-Si además tenemos en cuenta, que el pilar fundamental de cualquier proyecto de software libre es la comunidad que existe alrededor. Se puede deducir, que un proyecto al que se le pone un licencia permisiva, va a adquirir una comunidad productiva con rapidez.
-*Una comunidad a su alrededor
-*Creo en la filosofia del software libre, el bien fisico y el bien virtual
+Proyecto Fin de Máster
 
-Tecnologías.
-4. ¿Cuándo? (when) 
-Historia del dinero.
-Contextualización socioeconómica y cultural. Era digital.
+\vspace{2.5cm}
 
-5. ¿Dónde? (where) 
+\LARGE
+
+Shoali
+
+\vspace{4cm}
+
+\large
+Autor: Diego Pardilla Mata \\
+Tutor: Dr. Gregorio Robles
+\end{center}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+~
+\newpage
+
+\thispagestyle{empty}
+\vspace{3cm}
+\begin{flushright}
+\textbf{\textit{Agradecimientos}} \\
+\textit{A Gregorio Robles y el equipo de Libresoft en la Universidad
+Rey Juan Carlos, \\
+por ....  \\
+A mi familia, ....}
+\vspace{2cm}
+
+\textbf{\textit{Dedicatoria}} \\
+\textit{Para ...}
+\end{flushright}
+\newpage
+
+~
+\newpage
+
+\thispagestyle{empty}
+\vspace{12cm}
+\begin{flushright}
+
+(C) 2013 Diego Pardilla Mata. Algunos derechos reservados.
+
+Este documento está distribuido bajo licencia Creative Commons 
+Atribución-CompartirIgual 3.0,
+disponible en \url{http://creativecommons.org/licenses/by-sa/3.0/}
+
+El código en formato \LaTeX{} del documento está ubicado en:
+\url{https://gitorious.org/master\_mswl/master\_thesis}
+\end{flushright}
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Resumen}
+\markboth{RESUMEN}{RESUMEN}
+\label{chap:resumen}
+Párrafo introductorio
+
+El principal objetivo de este trabajo es ....
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introducción}
+\label{chap:introduction}
+
+%1.¿Qué? (what)
+\textbf{¿Qué? (what)}
+
+Es un servicio web diseñado para ayudar a la gente a hacer transacciones de 
+dinero entre pares sin necesidad de intermediarios. Está aplicación lo que te 
+concede es ser dueño de tu propio dinero, sin poner los intereses al servicio 
+de intermediarios. Es un sistema que permite controlar como prestar o recibir 
+capital con absoluta transparencia. La plataforma creará redes sociales de 
+intercambio de fondos. Existen dos formas de realizar un préstamo, directa o 
+con cadenas de confianza. La \textbf{transacción directa}, es el auténtico 
+préstamo \textit{"peer-to-peer"}, en el que uno o varios prestatarios piden 
+capital de manera directa a otro u otros prestamistas; sin importar la relación 
+que exista entre ellos, pero si la reputación. El otro tipo es, a través de una 
+\textbf{cadena de confianza}. El préstamo sólo se puede ejecutar cuando entre 
+el prestamista y el prestatario existe algún camino dentro de su red social 
+\cite{ripple}, sin tener en cuenta la reputación.
+
+El servicio está descentralizado, lo que lo hace aún más transparente, ya que 
+impide la concentración de información en determinados puntos y su posible 
+manipulación. Todas los servidores pueden hablar entre ellos, permitiendo a 
+todos los usuarios interactuar entre ellos, sin importar su origen. La redes 
+sociales emergentes serán descentralizadas y cumplirán con las especificaciones 
+del \textit{"W3C federated web social incubator group"} 
+\url{http://www.w3.org/2005/Incubator/federatedsocialweb/}, consiguiendo así, 
+que cada usuario sea libre de compartir su información, los datos que genera, 
+y su identidad online.
+
+Es una aplicación con transfondo basado en el modelo de economía del bien común 
+descrito por Christian Felber \cite{Christian Felber}. Siempre se intentan 
+maximizar, en la medida de lo posible, los valores de la matriz del bien común 
+\url{www.gemeinwohl-oekonomie.org/wp-content/uploads/2012/03/Matriz\_Bien\_Com\%C3\%BAn\_41.pdf}. 
+Estos principios son cinco, la dignidad humana, la solidaridad, 
+la sostenibilidad ecológica, la justicia social, y la participación democrática 
+y transparencia. El interés final del proyecto, es intentar reportar el mayor 
+beneficio al procomún.
+
+En pro de la ciencia y la investigación, la aplicación permite ser configurada 
+para que todo aquel que lo desee pueda hacer una investigación subyacente. 
+Con esta opción activa se dejan accesibles los datos de todo lo que sucede en 
+ella, siempre cumpliendo con la Ley Orgánica de Protección de Datos (LOPD) 
+\cite{LOPD}. Además, por su creación bajo herramientas de software libre, 
+se pueden hacer estudios sobre su desarrollo.
+
+%2. ¿Quién? (who)
+%Lo hace. Una comunidad de software libre.
+%Lo usa. El que presta y el que pide.
+\textbf{¿Quién? (who)}
+
+Es una aplicación libre, con lo que cualquier persona que lo desee puede 
+desarrollar sobre ella. La intención es tener un grupo de colaboradores 
+multidisciplinar, que de manera ``altruista'' creen, mantengan, diseñen, 
+corrijan y ayuden en el proyecto. El deseo no es tener una gran masa de gente 
+detrás del proyecto, sino una comunidad bien organizada. Para conseguir captar 
+a gente, se debe de crear un proyecto atractivo, con una puerta de entrada 
+sencilla. Una persona debe de poder colaborar, sin que le conlleve mucho 
+trabajo y tiempo, y saber en que puede ayudar. Para ello, deben de existir todo 
+tipo de ayudas (wikis, listas de correo, canales irc, y distintas 
+documentaciones) y una forja bien organizada.
+
+En un principio se buscan los tres perfiles básicos para todo proyecto 
+(desarrolladores, diseñadores y traductores)
+
+Por qué estos tres perfiles:
+\begin{itemize}
+    \item Se necesitan desarrolladores,  para que el proyecto tenga musculo.
+    \item Se requieren de diseñadores, para que participar resulte atractivo.
+    \item Se demandan traductores, para conseguir la mayor difusión posible.
+\end{itemize}
+
+Además la aplicación, una vez publicada debe de conseguir usuarios que la 
+utilicen. Existen dos perfiles, los que prestan dinero y los que lo necesitan. 
+Tanto unos, como otros necesitan de la generación de una red social que les 
+permita interactuar entre ellos. La plataforma debe de ser capaz de germinar 
+una red de usuarios. Los nodos de la red pueden estar conectados de manera 
+directa (transacción directa) o bien a través de otros (cadenas de confianza). 
+En función de la gente que se conecta, se podrían hacer algunos estudios 
+interesantes, como observar cual es el porcentaje de gente altruista, o ver los 
+pagos medios que fructifican, o descubrir la topología de la red que emerge. 
+Según un estudio de Steven Strogaz \cite{Steven Strogaz}, sobre la topología 
+de las redes, las más eficientes son las conocidas como ``pequeños mundos''. 
+Redes en las que todos los nodos están conectados a sus vecinos y de vez en 
+cuando un nodo pega un salto a otro extremo de la red. Con le que a lo mejor 
+sería interesante permitir a cada usuario invitar a un par de amigos a la red 
+y de esta manera afianzar nodos vecinos, creando cadenas de confianza más 
+robustas.
+
+%3. ¿Cómo? (how)
+%tecnologías, software libre
+\textbf{¿Cómo? (how)}
+
+Todo el proyecto es libre. El software y la documentación, están bajo licencias 
+libres, para poder ser usados, copiados, modificados y distribuidos, 
+por cualquiera.
+
+La decisión de que sea libre es por la creencia de que cualquier bien virtual, 
+como dice Bifo intangible, replicable y no consumible, privatizarlo sería ir en 
+contra del bien común.
+
+Si pensamos en el software, como un bien intangible, replicable y no consumible, 
+vemos que la privatización del bien pierde el sentido, al no tener exclusividad 
+de consumo. Con lo que grandes corporaciones intentan recurrir a la extorsión, 
+a la violencia y al chantaje para poder imponer una privatización para la que 
+no existe ya justificación. Bifo \cite{Bifo Cap. Fraternidad, saber, no saber}
+
+Existe otra hipótesis paralela para la privatización, la necesidad de estimular 
+la innovación a través de la competencia orientada al enriquecimiento. 
+Pero este razonamiento pierde su fuerza, en el momento que observamos proyectos 
+como Linux. Gracias a la colaboración de una comunidad generada espontáneamente 
+a través de la red, por el mero echo de divertirse, es capaz de crear un 
+software mejor que el de una sociedad privada. No se debe intentar promover la 
+innovación y el desarrollo, detrás del telón de la gratificación económica, ya 
+que no es el único factor que puede influir. Por ejemplo, en las comunidades 
+FLOSS, hay gente que colabora de manera altruista, para divertirse, por el 
+reconocimiento, por confraternizar o por todos a la vez.  Bifo 
+\cite{Bifo Cap. Fraternidad, saber, no saber}
+
+El software de la plataforma está sujeto a dos licencias. La licencia 
+\textit{``GNU Affero General Public License''} o AGPLv3, que involucra a toda 
+la parte web. Se ha escogido esta licencia, porque al ser una red social 
+federativa, interesa que en caso de que existan proyectos emergentes sigan 
+siendo libres, y aunque simplemente sean servicios web podamos obtener su 
+código fuente. La parte del núcleo o motor de la aplicación, sin embargo, está 
+licenciado con una \textit{``MIT License''} o licencia permisiva. Se decidió 
+inclinarse por está licencia, principalmente, para conseguir un desarrollo más 
+rápido, ágil y eficaz. Es bien sabido que con licencias de tipo permisivo, al 
+no poner ningún tipo de prerequisito para participar en el, se consigue un 
+desarrollo veloz e incluso a veces, dependiendo del proyecto, pasan a ser un 
+estándar (p.e. TCP/IP con una licencia de tipo BSD).
+
+La documentación relacionada con el proyecto está bajo una licencia 
+``Creative Commons Atribución-CompartirIgual 3.0 Unported'' o CC BY-SA 3.0. 
+La elección se hizo pensando en que la documentación debía de estar siempre 
+disponible a todo el mundo, sin importar quién haga las siguientes versiones.
+
+Las tecnologías que se van a usar son las siguientes (Django PostgresSQL, Bitcoin y MongoDB)
+\todo{Me faltaría descripción de cada tecnología}
+
+%4. ¿Cuándo? (when)
+%Historia del dinero.
+%Contextualización socioeconómica y cultural. Era digital.
+
+\textbf{¿Cuándo? (when)}
+Desde hace por lo menos 100.000 años, el ser humano, se ha buscado la necesidad 
+de crear un mercado para poder intercambiar bienes y servicios. Al principio, 
+la forma de comerciar era a través del trueque, un intercambio directo de 
+objetos o servicios por otros. El problema era que este tipo de negociación 
+podía resultar ardua, costosa y lenta, porque no siempre ambas partes tenían el 
+interés en este intercambio directo, implicando a terceros para conseguir que 
+la negociación se haga efectiva. Por ejemplo, un agricultor podía tener interés 
+en intercambiar su cosecha por cabezas de ganado, pero al ganadero le podía 
+interesar más tener madera y no el cultivo que le ofrecen, entonces el 
+agricultor debía de buscar alguna persona con madera interesada en negociar 
+con él y a si poder finalizar el trato con el ganadero.
+
+Con el tiempo, sucedió, que ciertos objetos eran más fáciles de intercambiar que 
+otros, no por su utilidad precisamente, sino por su ``liquidez'' o capacidad de 
+transformación en otro bien.  Aparecieron mercados cuyas monedas de cambio eran 
+objetos como comida, conchas, ropa, metales, plumas, piedras preciosas, 
+etcétera. Hoy en día, sigue existiendo este tipo de negociación, en el que un 
+objeto suple al papel moneda. Un claro ejemplo, es el intercambio de cigarrillos 
+que circula en las prisiones, que incluso sirve a reclusos que no fuman. Este 
+tipo de mercados surgen por la escasez de un bien que se convierte en la 
+``moneda oficial''. Esta necesidad generalizada que une a toda la comunidad, 
+posibilita el intercambio de objetos y servicios. Otro ejemplo, es el de los 
+chocolates en Europa después de la Segunda Guerra Mundial.
+
+El oro y la plata eran atractivos, ligeros, y fáciles de transportar, con lo 
+que rápidamente se convirtieron en objeto de cambio. Por su maleabilidad, 
+aparecen las primeras monedas grabadas, allá por el siglo VII a. C. en Lidia 
+(la actual Turquía), y con ello los primeros mercados con lo que hoy conocemos 
+por ``dinero''. La moneda era un patrón certificado de oro o plata con un peso 
+y una pureza.
+
+Actualmente siguen existiendo las monedas, aunque ya no son de oro y plata. 
+Las monedas de oro y plata desaparecen en el momento que aparece el papel 
+moneda, documento que legitimaba una equivalencia en oro. Con la entrada de los 
+billetes en los mercados, ya no hace falta ni trasladar las pesadas monedas de 
+oro, ni trabajarlas para su uso legal. Los primeros ``bancos'' o guardianes de 
+oro, son entidades que podían emitir billetes a sus clientes, a cambio de la 
+custodia de su oro.
+
+Al principio el modelo de negocio de un banco, era transparente. Ellos guardan 
+tú ``oro'' o dinero, a cambio de una renta por este servicio. Pero esto se 
+transformó, en el momento en el que se permiten la licencia de operar con tú 
+dinero, haciendo prestamos y generando deuda. Tú dinero, ya no está controlado 
+por ti.
+
+Con la aparición de Internet, los mercados se hacen mucho más grandes. Ahora 
+puedes comerciar, con casi cualquier persona del mundo que tenga acceso a 
+Internet. Hasta la aparición de una moneda virtual Bitcoin \ref{bitcoin_2009}, 
+el 24 de mayo de 2009, la gente no podía hacer compras descentralizadas por 
+Internet, siempre debía pasar por una entidad financiera que gestiona la 
+transacción, impidiendo realizar una transacción como en el mundo físico en la 
+cual tú das dinero a otro en la misma mano, sin pasar a través de nadie. 
+Este sistema permite crear un mercado virtual que no es controlado por nadie, 
+puedes hacer transacciones de moneda de manera anónima.
+
+%5. ¿Dónde? (where)
+\todo{¿Dónde? (where)
 Red. Redes sociales.
-Descentralización. Inteligencia de enjambre.
-Hace un tiempo atrás solo podiamos compartir dinero con la gente que podiamos ver fisicamente, actualmente eso lo puedes seguir haciendo pero apaerte puedes compartir con cuqluier persona del mundo. El proyecto quier conseguir una red social extensa que permita contactar con casi cualquier persona del mundo, gracias a la regal de los seis fgrados de separacion. Gracias a las actuales tecnologías cualquier persona del mundo puede comunicarse con otra. Esto permite crear una red social mundial en la que cualquier persona puede conpartir dinero con otro igual. El proyecto muestra  a parte de un nombre un perfil de la persona a quien quieres prestar y sus motivaciones, por ejemplo en que quiere invertir el dineroque tu le prestas. La red social baa a contar con un sistema de reputación (Martin Novack), para tener más información a la ora de prestarle o no  y a que interes, el dinero. La estructura de la red es un sistema descentralizado, no existe un nodo central que controle a todos los individuoas de la red, esto ofrece a la red mas transparencia y si el servicio deja de estar operativo, otro nodo podría adquirir los usuarios de otro. Nunca se perdería los creditos de calquier persona. 
+Descentralización. Inteligencia de enjambre.}
+%Hace un tiempo atrás solo podíamos compartir dinero con la gente que podíamos ver 
+%físicamente, actualmente eso lo puedes seguir haciendo pero aparte puedes 
+%compartir con cualquier persona del mundo. El proyecto quiere conseguir una 
+%red social extensa que permita contactar con casi cualquier persona del mundo, 
+%gracias a la regla de los seis grados de separación. Gracias a las actuales 
+%tecnologías cualquier persona del mundo puede comunicarse con otra. 
+%Esto permite crear una red social mundial en la que cualquier persona puede 
+%compartir dinero con otro igual. El proyecto muestra a parte de un nombre 
+%un perfil de la persona a quien quieres prestar y sus motivaciones, por ejemplo 
+%en que quiere invertir el dinero que tú le prestas. La red social va a contar 
+%con un sistema de reputación (Martin Novack), para tener más información a la 
+%hora de prestarle o no y a que interés, el dinero. La estructura de la red es 
+%un sistema descentralizado, no existe un nodo central que controle a todos 
+%los individuos de la red, esto ofrece a la red mas transparencia y si el 
+%servicio deja de estar operativo, otro nodo podría adquirir los usuarios de otro. 
+%Nunca se perdería los créditos de cualquier persona.
 
-6. Por qué?
+%6. ¿Porqué? (why)
+\todo{¿Porqué? (why)
 Motivaciones en primera persona.
 Frustraciones ante la falta de transparencia del sistema financiero.
 Traslado del modelo open source al modelo financiero. 
@@ -60,104 +390,357 @@ Llevo muchos años involucrado en el mundo del software libre.
 Tras estudiar sistemas complejos … 
 Me he interesado por Cooperación como estrategia eficaz (teoría de juegos)
 goteo
-Movimientos sociales emergentes: 15 M, primavera  árabe, wikilik, hardware libre
-Bailarín.
-Open 
-Orsai 
-Microcréditos.
-La motivación principal para la creación del proyecto es crear un nuevo metodo de intercambio de dinero virtualmente. Este metodo de prestamo es muy antiguo, distintas culturas lo han hecho y lo siguen haciendo. La motivación es permitir a los distintos usuarios una opcion alternativa a parte del metodo tradicional de dar el dinero a una entidad finaciera para que lo invierta porti, es lo que sea... El p2p lending permite al usuario final ser dueño de su propio dinero. Con los avances de los ultimos años es mas facil o probabale conseguir a gente que quiera o desee invertir si dinero. Sin necesidad de acudir a una entidad finanaciera para que lo haga por ti, de manera transparente. Ademas existe otras razones mas .... Creo que es mi deber, intentar mostrar (saber nadar de RSM) a la gente otros tipos de modelos de inversión y no el tradicional. Ultimamente y con lo que esta sucediendo a nivel economico mundial me ha echo pensar que algo en el sistema financiero actual está fallando y no será por que los "seres humanos" somos egoistas y no tenemos dinero para compartir, es por la manera que existe para compartirlo. Todos tenemos una necesidad de cooperar (Martin novack) lo unico que el escenario en el que estamos subidos no nos permite actuar asi. Por esto me vi en la necesidad de crear ub sistema alternativo en el que se apoye y se premie la cooperación y el altruismo. Utilizar euna estrategia egoista o defect no es siempre lo mejor para todos. Creo que se debe de cambiar el pensamientro de sis es pa mi mejor, si no lo mejor para todos es bueno.
+Movimientos sociales emergentes: 15 M, primavera  árabe, wikileaks, hardware libre
+Christian Felber.
+Open ecology, porque no open economy.
+Orsai.
+Microcréditos. Premio nobel.}
+%La motivación principal para la creación del proyecto es crear un nuevo método 
+%de intercambio de dinero virtualmente. Este método de préstamo es muy antiguo, 
+%distintas culturas lo han hecho y lo siguen haciendo. La motivación es permitir 
+%a los distintos usuarios una opción alternativa a parte del método tradicional 
+%de dar el dinero a una entidad financiera para que lo invierta por ti, es lo 
+%que sea... El p2p lending permite al usuario final ser dueño de su propio dinero. 
+%Con los avances de los últimos años es mas fácil o probable conseguir a gente 
+%que quiera o desee invertir si dinero. Sin necesidad de acudir a una entidad 
+%financiera para que lo haga por ti, de manera transparente. 
+%Ademas existe otras razones más .... Creo que es mi deber, intentar mostrar 
+%(saber nadar de RSM) a la gente otros tipos de modelos de inversión y no el 
+%tradicional. Últimamente y con lo que esta sucediendo a nivel económico mundial 
+%me ha echo pensar que algo en el sistema financiero actual está fallando y no 
+%será por que los "seres humanos" somos egoístas y no tenemos dinero para 
+%compartir, es por la manera que existe para compartirlo. Todos tenemos una 
+%necesidad de cooperar (Martin novack) lo único que el escenario en el que 
+%estamos subidos no nos permite actuar así. Por esto me vi en la necesidad de 
+%crear un sistema alternativo en el que se apoye y se premie la cooperación y 
+%el altruismo. Utilizar una estrategia egoísta o ``defect'' no es siempre lo 
+%mejor para todos. Creo que se debe de cambiar el pensamiento de si es para mi 
+%mejor, si no que lo mejor para todos es bueno.
 
 
 
--¿De que es? y ¿en que consiste?
-Desde hace por lo menos 100.000 años, el ser humano, se ha buscado la necesidad de crear un mercado para poder intercambiar bienes y servicios. Al principio, la forma de comerciar era a través del trueque, un intercambio directo de objetos o servicios por otros. El problema era que este tipo de negociación podía resultar ardua, costosa y lenta, porque no siempre ambas partes tenían el interés en este intercambio directo, implicando a terceros para conseguir que la negociación se haga efectiva. Por ejemplo, un agricultor podía tener interés en intercambiar su cosecha por cabezas de ganado, pero al ganadero le podía interesar más tener madera y no el cultivo que le ofrecen, entonces el agricultor debía de buscar alguna persona con madera interesada en negociar con él y a si poder finalizar el trato con el ganadero. 
+%OTRAS IDEAS
+%*CoinWorked pagina que te paga en bitcoins por hacer trabajos.
+%*Moneda alternativas, monedas sociales, ECO, PUMA, FIORITO, RUPI, EPI, y PEPA 
+%entre otras. Time dollar o banco de tiempo y trade dollar es la moneda de plata
+%*Mirar ¿que es el virtapay?, ¿ripple es un sistema parecido al mio, es genial 
+%es una red de confianza para dar crédito, mirarlo bien??
+%*Mirar vídeo ¿como se crea el dinero?
+%*Leer movimientos hacia un web independiente de Alfonso Romay, Red social federativa
+%*Mirar anarcocapitalismo, criptoanarquía, cuestiones de descentralizar las cosas
+%*Commodity money
+%*Estudio de la comparativa de las redes aleatorias (solo microcréditos) , de 
+%las redes de vecinos mas cercanos (ripple) y los small worlds (mio)
+%*Estudio de la avaricia de los individuos, si ponen mas intereses que los bancos.
+%*Se puede estar negociando con tú dinero en cosas que van en contra de tus 
+%principios o que desconozcas. Actualmente nos sucede esto ya que el banco se 
+%permite la licencia de negociar con todo el dinero que entra en sus arcas.
+%*¿que sucede ante el pánico de ahorradores?
+%*Habría que hablar de los banco, de sus robos y todas sus movidas, como lo de 
+%que negocian con el dinero de la peña, sin tan si quiera tenerlo. O lo de la 
+%emisión del dinero 1/9 y lo de los billetes y la cantidad de oro de las arcas, 
+%que se duplica la cantidad.
+%*Desde los primeros bancos, hasta ahora, el mercado funciona con billetes y 
+%monedas o ``dinero''. La gente negocia casi siempre con dinero, aunque 
+%últimamente están apareciendo otros tipos de mercados como son el de tiempo 
+%y el de blabla, ...
+%Después de esta breve reseña histórica de como ha evoluciona do el dinero y 
+%los mercados, expongo porque el interés de mi proyecto. Teniendo en cuenta 
+%que hemos tenido la necesidad de negociar desde hace mucho tiempo, pienso 
+%que actualmente en la era digital y con las nuevas tecnologías que están 
+%saliendo veo la necesidad de poder negociar con otros a través de Internet, 
+%sin necesidad de intermediarios que sea tal cual es en un mercado del mundo 
+%físico en el cual yo ofrezco un billete a otro y el me da el bien al coste 
+%que hemos negociado. Actualmente disponemos de una moneda virtual que nos 
+%podría ayudar a a hacer esto, es el Bitcoin, nos permite hacer transacciones 
+%anónimas sin que nadie se interponga ni sepa quien la hace, similar a lo que 
+%sucedería en el mundo real. La aplicación que quiero proporcionar va más 
+%haya, es la posibilidad de poder dar o invertir tú dinero de manera directa 
+%sin que existan intermediarios que especulen con tus deudas. Que seas tú el 
+%único que gestione tu dinero. Este sistema permitiría a prestatarios y 
+%prestamistas hacer operaciones directas sin intermediarios, a parte este 
+%sistema se beneficiaria del sistema de microcréditos ya que la aplicación lo 
+%que te permitiría es que unos cuantos pudieran prestar a uno.
 
-Con el tiempo, sucedió, que ciertos objetos eran más fáciles de intercambiar que otros, no por su utilidad precisamente, sino por su ``liquidez'' o capacidad de transformación en otro bien.  Aparecieron mercados cuyas monedas de cambio eran objetos como comida, conchas, ropa, metales, plumas, piedras preciosas, etcétera. Hoy en día, sigue existiendo este tipo de negociación, en el que un objeto suple al papel moneda. Un claro ejemplo, es el intercambio de cigarrillos que circula en las prisiones, que incluso sirve a reclusos que no fuman. Este tipo de mercados surgen por la escasez de un bien que se convierte en la ``moneda oficial''. Esta necesidad generalizada que une a toda la comunidad, posibilita el intercambio de objetos y servicios. Otro ejemplo, es el de los chocolates en Europa después de la Segunda Guerra Mundial.
+% con el siguiente ejemplo:
+%Desde hace miles de años se viene compartiendo el dinero, o cooperando entre 
+%tal y tal, la estrategia más Tic-for-Tac, es absurdo pensar que la existencia 
+%de algo centralizado es bueno, es absurdo pensar que la existencia de 
+%intermediarios es buena. Habla de la existencia de la moneda y de los 
+%intercambios de pares (música, vídeos, trueque). La entidad financiera es un 
+%invento mas o menos moderno. Es un concepto tan antiguo poder interactúa con 
+%tus iguales. Hablar de los microcréditos.
+%Shoali es una aplicación web que permite gestionar, de manera descentralizada, 
+%el préstamo de dinero entre particulares. Explicar el P2Plending, explicar la 
+%cooperación, explicar que es una técnica antigua de hace tiempo que no es 
+%nada nuevo. Red de redes
+%El objetivo es que cada persona sea dueño de su propio dinero, y pueda dejarlo 
+%de forma transparente como se quiera. La aplicación debe de ser capaz de 
+%permitir a cada usuario, realizar préstamos de manera sencilla, a cualquier 
+%persona o grupo de personas.
+%¿motivacion? ¿porque lo hago?
+%Porque es genial para obtener otro método de financiación no monopolizado por 
+%los intermediarios, para que la gente pueda utilizar el P2P para intercambiar 
+%un bien como la moneda. Por que los sistemas que existen hasta ahora no son 
+%Free. Porque creo que la cooperación y los microcréditos son un método muy 
+%útil de evolución humana.
+%Futuras investigaciones
+%Un nuevo tipo de mercado
+%-tecnologias
+%Python
+%Django
+%Postgres o una base de datos.
+%BitCoin
+%MongoDB
+%Distribuido, federativas (red de redes)
+%-estructura, más adelante
+%log transparencia para hacer distintos estudios
+%*Objetivos
+%OBJETIVOS
+%El propósito a corto plazo, es la creación de un prototipo de aplicación web 
+%sobre\textbf{préstamo entre particulares} (en inglés ``P2P lending'' o `
+%`social lending'') y a largo plazo, que esta aplicación se pueda aplicar al 
+%mundo real. Un servicio web que permita a los usuarios ofertar préstamos de 
+%manera transparente. Por un lado los prestamistas, podrán decidir a quien 
+%prestan y a que interés, y los prestatarios de quien lo reciben, todo esto 
+%sin necesidad de ningún intermediario. El objetivo principal es interconectar 
+%a cuanta más gente mejor para que se puedan dejar el dinero entre ellos.
 
-El oro y la plata eran atractivos, ligeros, y fáciles de transportar, con lo que rápidamente se convirtieron en objeto de cambio. Por su maleabilidad, aparecen las primeras monedas grabadas, allá por el siglo VII a. C. en Lidia (la actual Turquía), y con ello los primeros mercados con lo que hoy conocemos por ``dinero''. La moneda era un patrón certificado de oro o plata con un peso y una pureza. 
+%\begin{enumerate}{Subobjetivos:}
+%\item\textbf{Dar visibilidad al proyecto}. Ya que el éxito de este servicio va acompañado de la cantidad de gente que haya interconectada, habrá que intentar hacer todo lo posible para que llegue al mayor número de gente. Se deberá de hacer una portal web con un mantenimiento sostenido. El portal debe de contener: una página principal con la descripción breve y concisa del proyecto, un apartado de noticias con soporte RSS, una wiki con documentación tanto para usuarios, como para desarrolladores, una sección de FAQ, una descripción más detallada del proyecto y una parte de contacto. A través del portal, cuando el proyecto vea la luz, se hará también la gestión de alta de usuarios y acceso a la plataforma. Además del portal, se deberán de publicar asiduamente las últimas noticias del proyecto en las distintas redes sociales y sistemas de microblogging libres. Finalmente, todo el contenido debe de estar publicado en inglés y castellano.
 
-Actualmente siguen existiendo las monedas, aunque ya no son de oro y plata. Las monedas de oro y plata desaparecen en el momento que aparece el papel moneda, documento que legitimaba una equivalencia en oro. Con la entrada de los billetes en los mercados, ya no hace falta ni trasladar las pesadas monedas de oro, ni trabajarlas para su uso legal. Los primeros ``bancos'' o guardianes de oro, son entidades que podían emitir billetes a sus clientes, a cambio de la custodia de su oro.
+%\item Cumplir los hitos y criterios para el desarrollo de un proyecto de software libre establecido por  pili y mili en el libro titititti
+% 
+%(6 a 12) un parrafo cada uno, pueden ser web site, tecnologicas y no tecnologicas ¿como hacer esto? (karl fogel) investigarlo, p.e (Street performance protocol)
 
-Al principio el modelo de negocio de un banco, era transparente. Ellos guardan tú ``oro'' o dinero, a cambio de una renta por este servicio. Pero esto se transformó, en el momento en el que se permiten la licencia de operar con tú dinero, haciendo prestamos y generando deuda. Tú dinero, ya no está controlado por ti.
- 
-Con la aparición de Internet, los mercados se hacen mucho más grandes. Ahora puedes comerciar, con casi cualquier persona del mundo que tenga acceso a Internet. Hasta la aparición de una moneda virtual Bitcoin \ref{bitcoin_2009}, el 24 de mayo de 2009, la gente no podía hacer compras descentralizadas por Internet, siempre debía pasar por una entidad financiera que gestiona la transacción, impidiendo realizar una transacción como en el mundo físico en la cual tu das dinero a otro en la misma mano, sin pasar a través de nadie. esto permite usar el mercado de interenet sin ser controlado por nadie. Concepto de anonimicidad muy importante ponerlo.
+%Objetivos específicos.
+%a. Elegir un nombre.
+%b. 
+%c. 
+%\item \textbf{Facilitar datos relevantes generados en la plataforma}. Además de permitir el acceso a cualquiera de los registros que dejan las aplicaciones usadas en el proceso de creación y mantenimiento, también interesa que la aplicación pueda mostrar, de manera transparente, los datos más interesantes que vaya recogiendo. Con esto, se consiguen favorecer posibles estudios científicos, a parte de dar mayor transparencia al servicio.
+%
+%\item \textbf{Desarrollar un servicio web federado}. La plataforma debe de cumplir con los estándares del \textit{``W3C Federated Social Web Incubator Group''} escritos en el \textit{``A Standards-based, Open and Privacy-aware Social Web''}. El servicio debe de estar totalmente descentralizado, precisamente por el interés puesto en que cada uno sea dueño de su propio dinero y así quitarse los intermediarios. La idea es que cualquier usuario pueda usar el servicio sin importarle el proveedor, permitiendo controlar la privacidad de sus datos, y quitando el temor de que un servicio centralizado pueda ``espiarte''. 
+%
+%\item \textbf{Conseguir un proyecto totalmente libre}. Se quiere permitir a cualquier persona que pueda usarlo, copiarlo, modificarlo y distribuirlo. Para ello toda la documentación e información que vaya surgiendo debe estar bajo una licencia libre, en este caso una licencia ``Creative Commons Atribución-CompartirIgual 3.0 Unported'' o CC BY-SA 3.0. Y el software también será libre. Por un lado, los servicios que se ofrezcan estarán licenciados bajo ``GNU Affero General Public License'' o AGPLv3, para que si el usuario del servicio está interesado en el software lo pueda obtener. Y por otra parte, el núcleo o motor de la aplicación que estará licenciado bajo una ``MIT License'' o licencia permisiva, con el fin de conseguir un desarrollo más ágil, rápido y eficaz. 
+%
+%\item \textbf{Crear una plataforma de desarrollo o forja}. Si se desea crear una comunidad de desarrollo detrás del proyecto, se debe de procurar dar todas las facilidades al desarrollador. Cualquier artesano para que tenga cierto interés en hacer algo, debe de tener unas herramientas adecuadas. Estas herramientas deben de ser bien conocidas por el artesano, para permitirle adecuarlas a cualquier cambio que vea necesario. Lo mismo pasa con un artesano del software. Para que un desarrollador se ponga a tirar líneas de código, debe de haber un lugar en donde exista una buena documentación de desarrollo. Esta documentación debe tener especificado, las herramientas de desarrollo, el flujo de trabajo, los protocolos de desarrollo. cualquier desarrollador pueda acceder y desarrollaar con facilidad. Para ello se debe crear
+%\end{enumerate}
 
-CoinWorked pagina que extrae bitcoin de tu pagina web.????
+%Planificación
 
-Moneda alternativas, monedas sociales, ECO, PUMA, FIORITO, RUPI, EPI, y PEPA entre otras. Time dollar o banco de timepo y trade dollar es la moneda de plata
+%La planificación está construida sobre un diagrama de Gantt que muestro a continuación. \figure{}.
+%El listado de tareas es el siguiente:
 
-Mirar ¿que es el virtapay?, ¿¿¿¿ripple es un sistema parecido al mio, es genial es una red de confianza para dar crédito, mirarlo bien??
+%*Diseño e implementación (hasta marzo) Blog ir poniendo lo que se va haciendo.
+%*Resultados y pruebas (desde marzo)
+%*Conclusiones y trabajos futuros, espejo del capítulo 2, los problemas de la planificacion, soluciones y otros problemas).
 
-Mirar video ¿como se crea el dinero?
+\section{Terminología}
+\label{sec:terminology}
 
-Leer movimientos hacia un web independiente de Alfonso Romay, Red social federativa
+\subsection{Software libre}
+\label{subsec:freesoftware}
+El concepto de \textbf{software libre} fue concebido en 1983 por Richard
+Stallman~\cite{GNUproject}\dots
 
-Miarar anarcocapitalismo, criptoanarquia, cuestiones de descentralizar las cosas
-
-Commodity money
-
-Estudio de la comparativa de las redes aleatorias (solo microcreditos) , de las redes de vecinos mas cercanos (ripple) y los small worlds (mio)
-
-Estudio de la abaricia de los individuos, si ponen mas intereses que los bancos.
-
-Se puede estar negociando con tú dinero en cosas que van en contra de tus principios o que desconozcas. actualmente no sucede esto ya que el banco se permite la licencia de negociar con todo el dinero que entra en sus arcas.
-
-PANICO DE LOS AHORRADORES
-
-Habria que hablar de los banco sy de sus robos y todas sub movidas, como lo de que negocian con el dinero de la peña, sin tan si quiera tenerlo. O lo de la emision del dinero 1/9 y lo de los billetes y la cantidad de oro de las arca<s, que se dupllica la cantidad.
-
-Desde los primeros bancos, hasta ahora, el mercado funciona con billetes y monedas o ``dinero''. La gente negocia casi siempre con dinero, aunqeue ultimamente estan a paereciendo otros tipod de mercados como son el de tiempo y el de blabla, ...
-
-
-Despues de esta breve reseña historica de como ha evoluciona do el dinero y los mercados, expongo porque el interes de mi proyecto. Teniendo en cuenta que hemos tenido la necesidad de negociar desde hace mucho tiempo, pienso que actualmente en la era digital y con las nuevas tecnolpgias qye estran saliendo veo la necesidad de poder negociar con otros a traves de internte, sin necesidad de intermediarios que sea tal cual es eun mercado del mundo fisico en el cual yo ofrezco un buillete a otro y el me da el bien al coste que hemos negociado. Actualmente dsiponemos de una moneda virtual que nos podría ayudar a a hacer esto, es el Bitcoin, nos permite hacer trasacciones anonimas sin que nadie se interponga ni sepa quien la hace, similar a lo que sucederia en el mundo real. la plaicacion que quiero proporcionar va mas haya, es la posibilidad de poder dar o invertir tu dinero de manera directa sin que existan intermediarios qeu especulen con tus deudas. Que seas tu el unico que gestione tu dinero. Este sistema permitiaria a pretatarios y prestamiestas hacer operaciones directas sin intermediarios, a parte este sistema se beneficiaria del sistema de microcreditos ya que la plaiocacion lo que te permitieria es que unaos cuantos pudieran prestar a uno.
+The \textbf{Free Software Foundation} was created to advocate for free software
+ideals as outlined in the \textbf{Free Software
+Definition}~\cite{FreeSoftwareDef}, which states that for a program to be said
+that it is free (as in freedom) software, its license should include four basic
+freedoms:
+\begin{itemize}
+ \item Freedom to use the program, for any purpose
+ \item Freedom to study and adapt the programs (modify)
+ \item Freedom to distribute the program to others
+ \item Freedom to distribute to others the modified versions of the program
+\end{itemize}
 
 
- con el siguiente ejemplo:
-Desde hace miles de años se viene compartiendo el dinero, o cooperando entre tal y tal, la estrategia mas Tic-for Tac, es absurdo pensar que la existencia de algo centraliazdo es bueno, es absurdo pensar que la existen cia de intermdiarios es buena. Habla de la existencia de la moneda y de los intercambios de pares (musica, videos, trueque). La entidad financiera es un invento mas o menos moderno. Es un concepto tan antiguao poder interactura con tus iguales. Hablar de los microcreditos.
-Hablar de microcreditos, premio nobel.
-Shoali es una aplicación web que permite gestionar, de manera descentralizada, el préstamo de dinero entre particulares. Explicar el P2Plending, explicar la cooperacion, explicar que es una tecnica antigua de hace tiempo que no es nada nuevo. Red de redes
-El objetivo es que cada persona sea dueño de su propio dinero, y pueda dejarlo de forma transparente como se quiera. La aplicación debe de ser capaz de permitir a cada usuario, realizar préstamos de manera sencilla, a cualquier persona o grupo de personas.
--¿motivacion? ¿porque lo hago?
-Porque es genial para obtener otro metodo de financiacion no monopolizado por los intermediarios, para quie la gente pueda utilizar el P2P para intercambiar un bien como la moneda. Por que los sistemas que existen hasta ahora no son Free. Porque creo que la cooperacion y los micro creditos son un metodo muy util de evolucion humana.
-Futuras investigaciones
-Un nuevo tipo de mercado
--tecnologias
-Python
-Django
-Postgres o una base de datos.
-BitCoin
-Distribuido, federativas (red de redes)
--estructura, más adelante
-log transparencia para hacer distintos estudios
-*Objetivos
-OBJETIVOS
-El propósito a corto plazo, es la creación de un prototipo de aplicación web sobre\textbf{préstamo entre particulares} (en inglés ``P2P lending'' o ``social lending'') y a largo plazo, que esta aplicación se pueda aplicar al mundo real. Un servicio web que permita a los usuarios ofertar préstamos de manera transparente. Por un lado los prestamistas, podrán decidir a quien prestan y a que interés, y los prestatarios de quien lo reciben, todo esto sin necesidad de ningún intermediario. El objetivo principal es interconectar a cuanta más gente mejor para que se puedan dejar el dinero entre ellos.
+La figura~\ref{fig:ScenarioLocalization} muestra los 2 escenarios distintos:
 
-\begin{enumerate}{Subobjetivos:}
-\item\textbf{Dar visibilidad al proyecto}. Ya que el éxito de este servicio va acompañado de la cantidad de gente que haya interconectada, habrá que intentar hacer todo lo posible para que llegue al mayor número de gente. Se deberá de hacer una portal web con un mantenimiento sostenido. El portal debe de contener: una página principal con la descripción breve y concisa del proyecto, un apartado de noticias con soporte RSS, una wiki con documentación tanto para usuarios, como para desarrolladores, una sección de FAQ, una descripción más detallada del proyecto y una parte de contacto. A través del portal, cuando el proyecto vea la luz, se hará también la gestión de alta de usuarios y acceso a la plataforma. Además del portal, se deberán de publicar asiduamente las últimas noticias del proyecto en las distintas redes sociales y sistemas de microblogging libres. Finalmente, todo el contenido debe de estar publicado en inglés y castellano.
+  \begin{center}
+   \begin{figure}[htbp]
+   \begin{center}
+     \includegraphics[width=15cm]{img/ScenarioLocalization.png}
+     \caption{Localización y licencias de software}
+\label{fig:ScenarioLocalization}
+   \end{center}
+    \end{figure}
+   \end{center}
 
-\item Cumplir los hitos y criterios para el desarrollo de un proyecto de software libre establecido por  pili y mili en el libro titititti
- 
-(6 a 12) un parrafo cada uno, pueden ser web site, tecnologicas y no tecnologicas ¿como hacer esto? (karl fogel) investigarlo, p.e (Street performance protocol)
+\missingfigure{Si quieres poner una figura pero aún no la has encontrado, usa missingfigure}
 
-Objetivos específicos.
-a. Elegir un nombre.
-b. 
-c. 
-\item \textbf{Facilitar datos relevantes generados en la plataforma}. Además de permitir el acceso a cualquiera de los registros que dejan las aplicaciones usadas en el proceso de creación y mantenimiento, también interesa que la aplicación pueda mostrar, de manera transparente, los datos más interesantes que vaya recogiendo. Con esto, se consiguen favorecer posibles estudios científicos, a parte de dar mayor transparencia al servicio.
+\section{Sobre este documento}
+\label{sec:about}
 
-\item \textbf{Desarrollar un servicio web federado}. La plataforma debe de cumplir con los estándares del \textit{``W3C Federated Social Web Incubator Group''} escritos en el \textit{``A Standards-based, Open and Privacy-aware Social Web''}. El servicio debe de estar totalmente descentralizado, precisamente por el interés puesto en que cada uno sea dueño de su propio dinero y así quitarse los intermediarios. La idea es que cualquier usuario pueda usar el servicio sin importarle el proveedor, permitiendo controlar la privacidad de sus datos, y quitando el temor de que un servicio centralizado pueda ``espiarte''. 
+\subsection{Estructura del documento}
 
-\item \textbf{Conseguir un proyecto totalmente libre}. Se quiere permitir a cualquier persona que pueda usarlo, copiarlo, modificarlo y distribuirlo. Para ello toda la documentación e información que vaya surgiendo debe estar bajo una licencia libre, en este caso una licencia ``Creative Commons Atribución-CompartirIgual 3.0 Unported'' o CC BY-SA 3.0. Y el software también será libre. Por un lado, los servicios que se ofrezcan estarán licenciados bajo ``GNU Affero General Public License'' o AGPLv3, para que si el usuario del servicio está interesado en el software lo pueda obtener. Y por otra parte, el núcleo o motor de la aplicación que estará licenciado bajo una ``MIT License'' o licencia permisiva, con el fin de conseguir un desarrollo más ágil, rápido y eficaz. 
+Explicar de qué va cada capítulo.
 
-\item \textbf{Crear una plataforma de desarrollo o forja}. Si se desea crear una comunidad de desarrollo detrás del proyecto, se debe de procurar dar todas las facilidades al desarrollador. Cualquier artesano para que tenga cierto interés en hacer algo, debe de tener unas herramientas adecuadas. Estas herramientas deben de ser bien conocidas por el artesano, para permitirle adecuarlas a cualquier cambio que vea necesario. Lo mismo pasa con un artesano del software. Para que un desarrollador se ponga a tirar líneas de código, debe de haber un lugar en donde exista una buena documentación de desarrollo. Esta documentación debe tener especificado, las herramientas de desarrollo, el flujo de trabajo, los protocolos de desarrollo. cualquier desarrollador pueda acceder y desarrollaar con facilidad. Para ello se debe crear
+\subsection{Ámbito}
+\label{subsec:scope}
+Explicar los temas que no se tocan porque se salen del ámbito del documento.
+
+\subsection{Metodología}
+\label{subsec:methodology}
+De dónde se ha sacado la información, qué tratamiento se ha hecho a los datos,
+qué herramientas se han usado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Objetivos}
+\label{chap:Goals} 
+\section{Objetivos generales}
+
+Explicar los objetivos: qué quieres conseguir con el documento.
+
+\section{Subobjetivos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+También pueden llamarse objetivos operativos. Son cosas que han de conseguirse
+para cumplir los objetivos generales
+
+\begin{enumerate}
+ \item objetivo operativo 1
+
+ \item objetivo operativo 2
+
 \end{enumerate}
 
-Planificacion
+\subsection{Objetivo operativo 1}
+\begin{itemize}
+ \item Detallarlo un poco más: cómo se va a conseguir
+ \item Otro medio para conseguir el objetivo operativo 1
+\end{itemize}
 
-La planficación está construida sobre un diagrama de gantt que muestro a continuación. \figure{}.
-El listado de tareas es el siguiente:
 
-*Diseño e implementación (hasta marzo) Blog ir poniendo lo que se va haciendo.
-*Resultados y pruebas (desde marzo)
-*Conclusiones y trabajos futuros, espejo del capitulo 2, los problemas de la planificacion, soluciones y otros problemas).
+\chapter{Entrando en materia}
+\label{chap:materia}
+
+\section{Seccion 1}
+
+Ejemplo de URL: más información aquí: 
+\url{http://developer.android.com/guide/topics/resources/localization.html}.
+
+Ejemplo de tabla: En la tabla~\ref{tab:i18nformats} hay un resumen de los formatos
+de localización~\cite{GPL}.
+
+\begin{table}[htbp]
+\footnotesize
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Name} & \textbf{File extension} & \textbf{Notes} \\ \hline
+Android Resources & .xml & XML based format. 3 types of entries: \\
+ & & string, string-array and plurals. \\ \hline
+Apple strings files & .strings & UTF-16 \\ \hline
+Desktop files & .desktop & Configuration files describing how a program \\
+ & & appears in menu, etc. It is widely used by KDE and Gnome \\ \hline
+Gettext based formats & .po, .pot & Widely used in libre software projects.
+\\
+ & & Many tools to convert to/from PO files \\ \hline
+
+etc & etc & etc \\ \hline
+\end{tabular}
+\end{center}
+\caption{Formatos de internacionalizacion}
+\label{tab:i18nformats}
+\end{table}
+
+Ejemplo de\textbf{Nota al pie}\footnote{\url{
+http://translate.sourceforge.net/wiki/pootle/}, esto es una nota al pie}, 
+que en ~\LaTeX~ queda muy bien.
+
+
+Ejemplo de referencia no bibliografica, sino a un capitulo de nuestro doc:
+en la sección~\ref{chap:introduction} se comentan los conceptos introductorios.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Conclusiones}
+\label{chap:conclusions}
+
+%%%%%%%%%%%%%%%%
+% Review goals and objectives
+
+\section{Evaluación}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Se revisa si el documento cumple con los objetivos.
+
+
+
+%%%%%%%%%%%
+
+\section{Lecciones aprendidas}
+\label{sec:lessons}
+
+\subsection{Lección 1}
+\begin{itemize}
+ \item Aquí se muestra lo que cualquiera puede aprender leyendo este documento
+\end{itemize}
+
+\subsection{Lo que he aprendido}
+\begin{itemize}
+ \item Aquí indicas lo que tú en particular has aprendido haciendo el documento
+\end{itemize}
+
+
+\subsection{Aspectos de los estudios de máster, que me han ayudado en este trabajo}
+\begin{itemize}
+ \item Puedes ir asignatura por asignatura, indicando de qué te ha servido para escribir esto
+ \item O bien mencionar sólo las más importantes
+
+\end{itemize}
+
+\section{Trabajos futuros}
+\label{sec:future}
+
+\subsection{Más sobre...}
+
+Si algún aspecto ha quedado flojo, explicar de qué manera podría profundizarse.
+
+\subsection{Otros aspectos}
+
+Aspectos que no has tratado deliberadamente (ver sección sobre ámbito), y que podrían tratarse.
+
+
+\subsection{Otros enfoques}
+
+Por ejemplo estudiar otros proyectos similares, o esto mismo, pero aplicando otras herramientas.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{título del primer apéndice}
+
+\chapter{Puedes incluir un apéndice con tu experiencia personal}
+
+\chapter{Otro apéndice para los scripts o cosas que hayas programado}
+
+\chapter{Si te pasas de las 100 paginas, mete cosas en apendices}
+
+
+%%%%%%%%%%%%%%%%
+
+% BIBLIOGRAPHY %
+%%%%%%%%%%%%%%%%
+
+\bibliographystyle{alpha}
+\bibliography{bibliography}
+\label{Bibliography}
+\end{document}
+
+
+% Como decimos en el capítulo~\ref{chap:intro}...
+%
+% Véase la Fig.~\ref{fig:logo}
+%
+% \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=2cm, keepaspectratio]{img/logo_vect.eps}
+%  \label{fig:logo}
+% \end{figure}
+
+% Así se cita un libro de la bibliografía~~\cite{BuddOO}.
+%
