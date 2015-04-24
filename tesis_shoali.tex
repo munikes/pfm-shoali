@@ -163,6 +163,7 @@ El principal objetivo de este trabajo es ....
 \label{chap:introduction}
 
 %1.¿Qué? (what)
+%¿Qué es Shoali?.
 \textbf{¿Qué? (what)}
 
 Es un servicio web diseñado para ayudar a la gente a hacer transacciones de 
@@ -177,21 +178,39 @@ capital de manera directa a otro u otros prestamistas; sin importar la relación
 que exista entre ellos, pero si la reputación. El otro tipo es, a través de una 
 \textbf{cadena de confianza}. El préstamo sólo se puede ejecutar cuando entre 
 el prestamista y el prestatario existe algún camino dentro de su red social 
-\cite{ripple}, sin tener en cuenta la reputación.
+\cite{ripple}, sin tener en cuenta la reputación. También existen dos formas 
+de entrega, \textbf{de una vez o en varios pasos}. La primera, es la entrega 
+de todo el capital en un solo paso. Y la otra forma de entrega, sería con 
+varios pasos, en la que el prestamista puede elegir la cantidad que entrega en 
+cada paso y el número de pasos. La cantidad puede ser variable para cada paso 
+en un mismo préstamo si se desea.
 
-El servicio está descentralizado, lo que lo hace aún más transparente, ya que 
-impide la concentración de información en determinados puntos y su posible 
-manipulación. Todas los servidores pueden hablar entre ellos, permitiendo a 
-todos los usuarios interactuar entre ellos, sin importar su origen. La redes 
-sociales emergentes serán descentralizadas y cumplirán con las especificaciones 
-del \textit{"W3C federated web social incubator group"} 
+Cada usuario de la plataforma, a parte de su nombre, puede explicar que 
+motivaciones tiene para prestar su dinero. Al igual que el prestatario puede 
+mostrar en que va a invertir el dinero prestado. La red social va a contar 
+con un \textbf{sistema de reputación}, para tener más información a la hora de 
+prestarle o no y a que interés, el dinero. En algunos ecosistemas aparecen 
+métodos de reconocimiento de reputación de individuos \cite{Martin Novack}, 
+para el mejor funcionamiento del grupo.
+
+El servicio está \textbf{descentralizado}, lo que lo hace aún más transparente, 
+ya que impide la concentración de información en determinados puntos y su 
+posible manipulación. Todos los servidores pueden hablar entre ellos, 
+permitiendo a todos los usuarios interactuar entre ellos, sin importar su 
+origen. La redes sociales emergentes serán descentralizadas y cumplirán con las 
+especificaciones del \textit{"W3C federated web social incubator group"} 
 \url{http://www.w3.org/2005/Incubator/federatedsocialweb/}, consiguiendo así, 
 que cada usuario sea libre de compartir su información, los datos que genera, 
-y su identidad online.
+y su identidad \textit{"online"}, dejando al usuario decidir sobre su 
+\textbf{anonimicidad}. Si el servicio deja de estar operativo en algún punto de 
+la red, otro nodo podría recuperar los datos. Existe un sistema de replicación 
+de datos entre nodos parecido al ``RAID-3'' que usan los sistemas de 
+almacenamiento. Gracias a esto, no se perdería datos en la red. 
 
-Es una aplicación con transfondo basado en el modelo de economía del bien común 
-descrito por Christian Felber \cite{Christian Felber}. Siempre se intentan 
-maximizar, en la medida de lo posible, los valores de la matriz del bien común 
+Es una aplicación con un trasfondo basado en el modelo de economía del 
+bien común descrito por Christian Felber \cite{Christian Felber}. Siempre 
+se intentan maximizar, en la medida de lo posible, los valores de la matriz del 
+bien común 
 \url{www.gemeinwohl-oekonomie.org/wp-content/uploads/2012/03/Matriz\_Bien\_Com\%C3\%BAn\_41.pdf}. 
 Estos principios son cinco, la dignidad humana, la solidaridad, 
 la sostenibilidad ecológica, la justicia social, y la participación democrática 
@@ -210,23 +229,23 @@ se pueden hacer estudios sobre su desarrollo.
 %Lo usa. El que presta y el que pide.
 \textbf{¿Quién? (who)}
 
-Es una aplicación libre, con lo que cualquier persona que lo desee puede 
-desarrollar sobre ella. La intención es tener un grupo de colaboradores 
+Es una \textbf{aplicación libre}, con lo que cualquier persona que lo desee 
+puede desarrollar sobre ella. La intención es tener un grupo de colaboradores 
 multidisciplinar, que de manera ``altruista'' creen, mantengan, diseñen, 
 corrijan y ayuden en el proyecto. El deseo no es tener una gran masa de gente 
 detrás del proyecto, sino una comunidad bien organizada. Para conseguir captar 
 a gente, se debe de crear un proyecto atractivo, con una puerta de entrada 
 sencilla. Una persona debe de poder colaborar, sin que le conlleve mucho 
 trabajo y tiempo, y saber en que puede ayudar. Para ello, deben de existir todo 
-tipo de ayudas (wikis, listas de correo, canales irc, y distintas 
+tipo de ayudas (wikis, listas de correo, canales IRC, y distintas 
 documentaciones) y una forja bien organizada.
 
-En un principio se buscan los tres perfiles básicos para todo proyecto 
-(desarrolladores, diseñadores y traductores)
+En un principio se buscan los tres perfiles básicos para todo proyecto de 
+software (desarrolladores, diseñadores y traductores).
 
 Por qué estos tres perfiles:
 \begin{itemize}
-    \item Se necesitan desarrolladores,  para que el proyecto tenga musculo.
+    \item Se necesitan desarrolladores,  para que el proyecto tenga músculo.
     \item Se requieren de diseñadores, para que participar resulte atractivo.
     \item Se demandan traductores, para conseguir la mayor difusión posible.
 \end{itemize}
@@ -236,20 +255,20 @@ utilicen. Existen dos perfiles, los que prestan dinero y los que lo necesitan.
 Tanto unos, como otros necesitan de la generación de una red social que les 
 permita interactuar entre ellos. La plataforma debe de ser capaz de germinar 
 una red de usuarios. Los nodos de la red pueden estar conectados de manera 
-directa (transacción directa) o bien a través de otros (cadenas de confianza). 
+directa (transacción directa) o bien a través de otros (cadenas de confianza).
 En función de la gente que se conecta, se podrían hacer algunos estudios 
 interesantes, como observar cual es el porcentaje de gente altruista, o ver los 
-pagos medios que fructifican, o descubrir la topología de la red que emerge. 
+pagos medios que fructifican, o descubrir la topología de la red que emerge.
 Según un estudio de Steven Strogaz \cite{Steven Strogaz}, sobre la topología 
-de las redes, las más eficientes son las conocidas como ``pequeños mundos''. 
+de las redes, las más eficientes son las conocidas como ``pequeños mundos''.
 Redes en las que todos los nodos están conectados a sus vecinos y de vez en 
-cuando un nodo pega un salto a otro extremo de la red. Con le que a lo mejor 
+cuando un nodo pega un salto a otro extremo de la red. Con lo que a lo mejor 
 sería interesante permitir a cada usuario invitar a un par de amigos a la red 
 y de esta manera afianzar nodos vecinos, creando cadenas de confianza más 
 robustas.
 
 %3. ¿Cómo? (how)
-%tecnologías, software libre
+%Tecnologías, Software Libre, ...
 \textbf{¿Cómo? (how)}
 
 Todo el proyecto es libre. El software y la documentación, están bajo licencias 
@@ -257,17 +276,18 @@ libres, para poder ser usados, copiados, modificados y distribuidos,
 por cualquiera.
 
 La decisión de que sea libre es por la creencia de que cualquier bien virtual, 
-como dice Bifo intangible, replicable y no consumible, privatizarlo sería ir en 
-contra del bien común.
+como dice Franco Berardi, Bifo, intangible, replicable y no consumible, 
+privatizarlo sería ir en contra del bien común.
 
-Si pensamos en el software, como un bien intangible, replicable y no consumible, 
-vemos que la privatización del bien pierde el sentido, al no tener exclusividad 
-de consumo. Con lo que grandes corporaciones intentan recurrir a la extorsión, 
-a la violencia y al chantaje para poder imponer una privatización para la que 
-no existe ya justificación. Bifo \cite{Bifo Cap. Fraternidad, saber, no saber}
+\textit{"Si pensamos en el software, como un bien intangible, replicable y no 
+consumible, vemos que la privatización del bien pierde el sentido, al no tener 
+exclusividad de consumo. Con lo que grandes corporaciones intentan recurrir a 
+la extorsión, a la violencia y al chantaje para poder imponer una privatización 
+para la que no existe ya justificación"}. Franco Berardi, Bifo 
+\cite{Bifo Cap. Fraternidad, saber, no saber}
 
-Existe otra hipótesis paralela para la privatización, la necesidad de estimular 
-la innovación a través de la competencia orientada al enriquecimiento. 
+\textit{"Existe otra hipótesis paralela para la privatización, la necesidad de 
+estimular la innovación a través de la competencia orientada al enriquecimiento. 
 Pero este razonamiento pierde su fuerza, en el momento que observamos proyectos 
 como Linux. Gracias a la colaboración de una comunidad generada espontáneamente 
 a través de la red, por el mero echo de divertirse, es capaz de crear un 
@@ -275,35 +295,48 @@ software mejor que el de una sociedad privada. No se debe intentar promover la
 innovación y el desarrollo, detrás del telón de la gratificación económica, ya 
 que no es el único factor que puede influir. Por ejemplo, en las comunidades 
 FLOSS, hay gente que colabora de manera altruista, para divertirse, por el 
-reconocimiento, por confraternizar o por todos a la vez.  Bifo 
-\cite{Bifo Cap. Fraternidad, saber, no saber}
+reconocimiento, por confraternizar o por todos a la vez"}.  Franco Berardi, 
+Bifo \cite{Bifo Cap. Fraternidad, saber, no saber}
 
-El software de la plataforma está sujeto a dos licencias. La licencia 
-\textit{``GNU Affero General Public License''} o AGPLv3, que involucra a toda 
-la parte web. Se ha escogido esta licencia, porque al ser una red social 
+%El software de la plataforma está sujeto a dos licencias. La licencia 
+%\textit{``GNU Affero General Public License''} o AGPLv3, que involucra a toda 
+%la parte web. Se ha escogido esta licencia, porque al ser una red social 
+%federativa, interesa que en caso de que existan proyectos emergentes sigan 
+%siendo libres, y aunque simplemente sean servicios web podamos obtener su 
+%código fuente. La parte del núcleo o motor de la aplicación, sin embargo, está 
+%licenciado con una \textit{``MIT License''} o licencia permisiva. Se decidió 
+%inclinarse por está licencia, principalmente, para conseguir un desarrollo más 
+%rápido, ágil y eficaz. Es bien sabido que con licencias de tipo permisivo, al 
+%no poner ningún tipo de prerequisito para participar en el, se consigue un 
+%desarrollo veloz e incluso a veces, dependiendo del proyecto, pasan a ser un 
+%estándar (p.e. TCP/IP con una licencia de tipo BSD).
+El software de la plataforma está sujeto bajo la licencia 
+``GNU Affero General Public License'' o AGPLv3. 
+Se ha escogido esta licencia, porque al ser una red social 
 federativa, interesa que en caso de que existan proyectos emergentes sigan 
 siendo libres, y aunque simplemente sean servicios web podamos obtener su 
-código fuente. La parte del núcleo o motor de la aplicación, sin embargo, está 
-licenciado con una \textit{``MIT License''} o licencia permisiva. Se decidió 
-inclinarse por está licencia, principalmente, para conseguir un desarrollo más 
-rápido, ágil y eficaz. Es bien sabido que con licencias de tipo permisivo, al 
-no poner ningún tipo de prerequisito para participar en el, se consigue un 
-desarrollo veloz e incluso a veces, dependiendo del proyecto, pasan a ser un 
-estándar (p.e. TCP/IP con una licencia de tipo BSD).
+código fuente.
 
 La documentación relacionada con el proyecto está bajo una licencia 
 ``Creative Commons Atribución-CompartirIgual 3.0 Unported'' o CC BY-SA 3.0. 
 La elección se hizo pensando en que la documentación debía de estar siempre 
 disponible a todo el mundo, sin importar quién haga las siguientes versiones.
 
-Las tecnologías que se van a usar son las siguientes (Django PostgresSQL, Bitcoin y MongoDB)
+Las tecnologías que se van a usar son las siguientes (Django, PostgresSQL, 
+Bitcoin, API de Bitcoin para Python, Celery y MongoDB)
+\textbf{Django}
+\textbf{PostgresSQL}
+\textbf{Bitcoin}
+\textbf{Python-Bitcoin}
+\textbf{Celery}
+\textbf{MongoDB}
 \todo{Me faltaría descripción de cada tecnología}
 
 %4. ¿Cuándo? (when)
 %Historia del dinero.
 %Contextualización socioeconómica y cultural. Era digital.
-
 \textbf{¿Cuándo? (when)}
+
 Desde hace por lo menos 100.000 años, el ser humano, se ha buscado la necesidad 
 de crear un mercado para poder intercambiar bienes y servicios. Al principio, 
 la forma de comerciar era a través del trueque, un intercambio directo de 
@@ -353,50 +386,67 @@ Con la aparición de Internet, los mercados se hacen mucho más grandes. Ahora
 puedes comerciar, con casi cualquier persona del mundo que tenga acceso a 
 Internet. Hasta la aparición de una moneda virtual Bitcoin \ref{bitcoin_2009}, 
 el 24 de mayo de 2009, la gente no podía hacer compras descentralizadas por 
-Internet, siempre debía pasar por una entidad financiera que gestiona la 
-transacción, impidiendo realizar una transacción como en el mundo físico en la 
+Internet. Siempre debía pasar por una entidad financiera que gestiona la 
+transacción. Impidiendo realizar una transacción como en el mundo físico en la 
 cual tú das dinero a otro en la misma mano, sin pasar a través de nadie. 
-Este sistema permite crear un mercado virtual que no es controlado por nadie, 
-puedes hacer transacciones de moneda de manera anónima.
+Este sistema de monedas virtuales permite crear un mercado virtual que no es 
+controlado por nadie, ya puedes hacer transacciones de moneda similares a las 
+que hacemos en el mundo físico.
 
 %5. ¿Dónde? (where)
-\todo{¿Dónde? (where)
-Red. Redes sociales.
-Descentralización. Inteligencia de enjambre.}
-%Hace un tiempo atrás solo podíamos compartir dinero con la gente que podíamos ver 
-%físicamente, actualmente eso lo puedes seguir haciendo pero aparte puedes 
-%compartir con cualquier persona del mundo. El proyecto quiere conseguir una 
-%red social extensa que permita contactar con casi cualquier persona del mundo, 
-%gracias a la regla de los seis grados de separación. Gracias a las actuales 
-%tecnologías cualquier persona del mundo puede comunicarse con otra. 
-%Esto permite crear una red social mundial en la que cualquier persona puede 
-%compartir dinero con otro igual. El proyecto muestra a parte de un nombre 
-%un perfil de la persona a quien quieres prestar y sus motivaciones, por ejemplo 
-%en que quiere invertir el dinero que tú le prestas. La red social va a contar 
-%con un sistema de reputación (Martin Novack), para tener más información a la 
-%hora de prestarle o no y a que interés, el dinero. La estructura de la red es 
-%un sistema descentralizado, no existe un nodo central que controle a todos 
-%los individuos de la red, esto ofrece a la red mas transparencia y si el 
-%servicio deja de estar operativo, otro nodo podría adquirir los usuarios de otro. 
-%Nunca se perdería los créditos de cualquier persona.
+%Red. Redes sociales.
+%Descentralización. Inteligencia de enjambre.
+\textbf{¿Donde? (where)}
+
+Desde hace un tiempo atrás solo podíamos compartir dinero, sin intermediarios, 
+con la gente que podíamos ver físicamente. Más o menos 6 años. Actualmente, 
+además puedes compartir dinero con cualquier persona del mundo, que tenga 
+acceso al mundo virtual, gracias a la irrupción de las monedas virtuales. La 
+finalidad del proyecto es conseguir una extensa red social que permita 
+compartir dinero y experiencias con casi cualquier persona del mundo. Para 
+conseguirlo, cada nodo debería de tener por lo menos una cadena de confianza de 
+al menos seis elementos. La afirmación anterior, es una deducción lógica de la 
+teoría de los seis grados de separación de Ithiel de Sola Pool y Manfred Kochen 
+expuesta en 1950 \cite{ithiel_1950}. La Unión Internacional de 
+Telecomunicaciones de las Naciones Unidas (ITU) anunció que a finales de 2014 
+habrá cerca de tres mil millones de usuarios con Internet, con una penetración 
+de banda ancha móvil que se acerca al treinta y dos por ciento. Teniendo en 
+cuenta que actualmente la población mundial es de siete mil millones, entonces 
+un cuarenta por ciento aproximadamente de la población tiene acceso a Internet.
+
+Su condición de descentralizado permite que redes independientes o sin acceso
+a Internet, puedan tener su propio sistema de microcréditos montado.
+
+La red es distribuida y descentralizada, con lo que cualquiera que lo desee 
+puede montar su propio servicio. Estos nodos pueden ser independientes de los 
+demás, o pertenecientes a las distintas subredes que se formen. Con esto 
+conseguimos dar libertad al gestor de la plataforma, permitiéndole decidir 
+donde ponerla y con quien quiere compartirla.
+
+El usuario final tendrá la posibilidad de ver la topología de cada red o subred 
+que emerja, y así determinar si realmente quiere o no formar parte de ella. 
+Lógicamente dentro de cada una de estas redes, todos los usuarios están 
+interconectados, y simplemente la decisión de cada uno de ellos, expondrá lo 
+que es accesible y lo que no.
 
 %6. ¿Porqué? (why)
-\todo{¿Porqué? (why)
-Motivaciones en primera persona.
-Frustraciones ante la falta de transparencia del sistema financiero.
-Traslado del modelo open source al modelo financiero. 
-Fuentes de las que bebo.
-Llevo muchos años involucrado en el mundo del software libre.
-Tras estudiar sistemas complejos … 
-Me he interesado por Cooperación como estrategia eficaz (teoría de juegos)
-goteo
-Movimientos sociales emergentes: 15 M, primavera  árabe, wikileaks, hardware libre
-Christian Felber.
-Open ecology, porque no open economy.
-Orsai.
-Microcréditos. Premio nobel.}
-%La motivación principal para la creación del proyecto es crear un nuevo método 
-%de intercambio de dinero virtualmente. Este método de préstamo es muy antiguo, 
+%Motivaciones en primera persona.
+%Frustraciones ante la falta de transparencia del sistema financiero.
+%Traslado del modelo open source al modelo financiero. 
+%Fuentes de las que bebo.
+%Llevo muchos años involucrado en el mundo del software libre.
+%Tras estudiar sistemas complejos … 
+%Me he interesado por Cooperación como estrategia eficaz (teoría de juegos)
+%Goteo
+%Movimientos sociales emergentes: 15 M, primavera  árabe, wikileaks, hardware libre
+%Christian Felber.
+%Open ecology, porque no open economy.
+%Orsai
+%Microcréditos. Premio nobel.
+\textbf{¿Porqué? (why)}
+
+La motivación principal para la creación del proyecto es crear un nuevo método 
+de intercambio de dinero virtualmente. Este método de préstamo es muy antiguo, 
 %distintas culturas lo han hecho y lo siguen haciendo. La motivación es permitir 
 %a los distintos usuarios una opción alternativa a parte del método tradicional 
 %de dar el dinero a una entidad financiera para que lo invierta por ti, es lo 
